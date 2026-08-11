@@ -73,16 +73,82 @@ namespace ESPressio {
                 static constexpr UnitOrderOfMagnitude value = Milli;
             };
 
+            inline long double PowerOfTen(unsigned exponent) {
+                long double result = 1.0L;
+                long double factor = 10.0L;
+
+                while (exponent != 0U) {
+                    if ((exponent & 1U) != 0U) {
+                        result *= factor;
+                    }
+                    factor *= factor;
+                    exponent >>= 1U;
+                }
+
+                return result;
+            }
+
+            constexpr long double CompileTimePowerOfTen(
+                unsigned exponent
+            ) {
+                return exponent == 0U
+                    ? 1.0L
+                    : 10.0L * CompileTimePowerOfTen(exponent - 1U);
+            }
+
             inline long double ConvertMagnitudeValue(
                 long double value,
                 UnitOrderOfMagnitude source,
                 UnitOrderOfMagnitude target
             ) {
-                return value * std::pow(
-                    10.0L,
-                    static_cast<int>(source) - static_cast<int>(target)
+                const int exponentDifference =
+                    static_cast<int>(source) - static_cast<int>(target);
+
+                if (exponentDifference == 0) {
+                    return value;
+                }
+
+                const unsigned absoluteExponent = static_cast<unsigned>(
+                    exponentDifference < 0
+                        ? -exponentDifference
+                        : exponentDifference
                 );
+                const long double scale = PowerOfTen(absoluteExponent);
+
+                return exponentDifference < 0
+                    ? value / scale
+                    : value * scale;
             }
+
+            template <
+                UnitOrderOfMagnitude TSource,
+                UnitOrderOfMagnitude TTarget
+            >
+            struct CompileTimeMagnitudeConverter {
+                static long double Convert(long double value) {
+                    return static_cast<int>(TSource) <
+                            static_cast<int>(TTarget)
+                        ? value / CompileTimePowerOfTen(
+                            static_cast<unsigned>(
+                                static_cast<int>(TTarget) -
+                                static_cast<int>(TSource)
+                            )
+                        )
+                        : value * CompileTimePowerOfTen(
+                            static_cast<unsigned>(
+                                static_cast<int>(TSource) -
+                                static_cast<int>(TTarget)
+                            )
+                        );
+                }
+            };
+
+            template <UnitOrderOfMagnitude TMagnitude>
+            struct CompileTimeMagnitudeConverter<TMagnitude, TMagnitude> {
+                static long double Convert(long double value) {
+                    return value;
+                }
+            };
 
             inline long double SafeDivide(
                 long double numerator,
@@ -98,8 +164,15 @@ namespace ESPressio {
 
             template <typename TUnit>
             long double CanonicalValue(const TUnit& unit) {
+                const UnitOrderOfMagnitude canonicalMagnitude =
+                    UnitContextCanonicalMagnitude<TUnit::context>::value;
+
+                if (unit.orderOfMagnitude == canonicalMagnitude) {
+                    return static_cast<long double>(unit.value);
+                }
+
                 return unit.template ToMagnitude<long double>(
-                    UnitContextCanonicalMagnitude<TUnit::context>::value
+                    canonicalMagnitude
                 );
             }
 
@@ -146,6 +219,26 @@ namespace ESPressio {
                     );
                 }
                 return static_cast<TResult>(roundedValue);
+            }
+
+            template <typename TResult>
+            typename std::enable_if<
+                std::is_floating_point<TResult>::value,
+                TResult
+            >::type UncheckedUnitResult(long double value) {
+                return static_cast<TResult>(value);
+            }
+
+            template <typename TResult>
+            typename std::enable_if<
+                std::is_integral<TResult>::value &&
+                    !std::is_same<
+                        typename std::remove_cv<TResult>::type,
+                        bool
+                    >::value,
+                TResult
+            >::type UncheckedUnitResult(long double value) {
+                return static_cast<TResult>(std::round(value));
             }
 
             template <typename T, typename = void>
@@ -207,16 +300,46 @@ namespace ESPressio {
                         std::decay<TInputs>::type::context...
                     >::Calculate(inputs...);
 
-                    const long double storedValue = ConvertMagnitudeValue(
-                        calculatedValue,
-                        UnitContextCanonicalMagnitude<
-                            TTargetContext
-                        >::value,
-                        TDerived::baseOrderOfMagnitude
-                    );
+                    const long double storedValue =
+                        CompileTimeMagnitudeConverter<
+                            UnitContextCanonicalMagnitude<
+                                TTargetContext
+                            >::value,
+                            TDerived::baseOrderOfMagnitude
+                        >::Convert(calculatedValue);
 
                     return TDerived(
                         CheckedUnitResult<TValue>(storedValue)
+                    );
+                }
+
+                template <typename... TInputs>
+                static typename std::enable_if<
+                    std::is_convertible<
+                        decltype(UnitFormula<
+                            TTargetContext,
+                            std::decay<TInputs>::type::context...
+                        >::Calculate(
+                            std::declval<const TInputs&>()...
+                        )),
+                        long double
+                    >::value,
+                    TDerived
+                >::type FromUnchecked(const TInputs&... inputs) {
+                    const long double calculatedValue = UnitFormula<
+                        TTargetContext,
+                        std::decay<TInputs>::type::context...
+                    >::Calculate(inputs...);
+                    const long double storedValue =
+                        CompileTimeMagnitudeConverter<
+                            UnitContextCanonicalMagnitude<
+                                TTargetContext
+                            >::value,
+                            TDerived::baseOrderOfMagnitude
+                        >::Convert(calculatedValue);
+
+                    return TDerived(
+                        UncheckedUnitResult<TValue>(storedValue)
                     );
                 }
             };

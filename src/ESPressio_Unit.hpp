@@ -94,6 +94,14 @@ namespace ESPressio {
                 return ToMagnitude<double>(targetOrderOfMagnitude);
             }
 
+            double ToMagnitudeUnchecked(
+                UnitOrderOfMagnitude targetOrderOfMagnitude
+            ) const {
+                return ToMagnitudeUnchecked<double>(
+                    targetOrderOfMagnitude
+                );
+            }
+
             template <typename TResult>
             typename std::enable_if<
                 std::is_floating_point<TResult>::value,
@@ -121,6 +129,22 @@ namespace ESPressio {
                 }
 
                 return static_cast<TResult>(convertedValue);
+            }
+
+            template <typename TResult>
+            typename std::enable_if<
+                std::is_arithmetic<TResult>::value &&
+                    !std::is_same<
+                        typename std::remove_cv<TResult>::type,
+                        bool
+                    >::value,
+                TResult
+            >::type ToMagnitudeUnchecked(
+                UnitOrderOfMagnitude targetOrderOfMagnitude
+            ) const {
+                return Internal::UncheckedUnitResult<TResult>(
+                    _toMagnitudeAsLongDouble(targetOrderOfMagnitude)
+                );
             }
 
             template <
@@ -229,13 +253,10 @@ namespace ESPressio {
             long double _toMagnitudeAsLongDouble(
                 UnitOrderOfMagnitude targetOrderOfMagnitude
             ) const {
-                int exponentDifference =
-                    static_cast<int>(orderOfMagnitude) -
-                    static_cast<int>(targetOrderOfMagnitude);
-
-                return static_cast<long double>(value) * std::pow(
-                    static_cast<long double>(10),
-                    exponentDifference
+                return Internal::ConvertMagnitudeValue(
+                    static_cast<long double>(value),
+                    orderOfMagnitude,
+                    targetOrderOfMagnitude
                 );
             }
         };

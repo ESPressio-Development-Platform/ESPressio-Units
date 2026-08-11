@@ -308,6 +308,11 @@ Inverse-mass contexts use `Milli` because, for example, one joule per kilogram i
 
 `ToMagnitude()` converts the stored value from its current `orderOfMagnitude` to another magnitude. The conversion multiplier is calculated at runtime from the difference between the two base-10 exponents, avoiding the memory cost of a 25 × 25 lookup table.
 
+The scaler is specialized for SI powers of ten and does not call general-purpose
+`pow`/`powl`. Equal source and target magnitudes return immediately. Other
+magnitudes are calculated using exponentiation by squaring, requiring at most a
+small number of multiplications for the supported exponent range.
+
 Calling `ToMagnitude()` without a result template argument returns `double` by default:
 
 ```cpp
@@ -326,6 +331,19 @@ float asFloat = metres.ToMagnitude<float>(Deca);
 long double asLongDouble = metres.ToMagnitude<long double>(Deca);
 int asInteger = metres.ToMagnitude<int>(Deca);
 ```
+
+Latency-sensitive code that has already validated its numeric range can use the
+explicit unchecked variant:
+
+```cpp
+int millimetres = distance.ToMagnitudeUnchecked<int>(Milli);
+```
+
+`ToMagnitudeUnchecked<TResult>()` retains the normal magnitude scaling and
+nearest-integer rounding policy but omits finite-value and destination-range
+checks. The caller must guarantee that the result is representable by
+`TResult`; converting an out-of-range floating-point value to an integral type
+has undefined behavior in C++.
 
 Floating-point results retain the precision supported by the requested type. Integral results use nearest-integer rounding, with halfway values rounded away from zero: `1.4` becomes `1`, `1.5` becomes `2`, and `-1.5` becomes `-2`.
 
@@ -424,12 +442,27 @@ Velocity<double> velocity = Velocity<double>::From(distance, elapsed);
 // 200 metres per second, stored at Velocity's canonical magnitude
 ```
 
+An explicitly unchecked result path is also available when inputs and result
+ranges have already been validated:
+
+```cpp
+Velocity<float> velocity =
+    Velocity<float>::FromUnchecked(distance, elapsed);
+```
+
+`FromUnchecked()` omits the final finite-value and destination-range checks.
+Formula-domain validation, including division-by-zero rejection, remains active.
+
 Each operand is normalized to its own type's canonical magnitude before the
 formula is evaluated using `long double`. The result is range-checked, converted
 to the target numeric type, and stored at the target context's canonical
 magnitude. Integral targets use the same nearest-integer rounding policy as
 `ToMagnitude`; division by zero raises `std::domain_error`, while an
 out-of-range result raises `std::overflow_error`.
+
+Already-canonical operands bypass magnitude scaling entirely. Target scaling is
+selected from compile-time magnitudes, allowing it to become either a no-op or a
+constant multiply/divide in optimized builds.
 
 The generated [Unit Conversion Reference](docs/UNIT_CONVERSIONS.md) documents
 the direct targets and every supported `From(...)` signature for each of the 83
