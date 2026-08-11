@@ -5,7 +5,7 @@ Light-weight, expressive, and type-safe physical quantities for microcontroller 
 
 ## Latest Stable Version
 
-ESPressio Units is currently under development and has not yet received its first stable release.
+The latest Stable Version is [0.1.0](https://github.com/Flowduino/ESPressio-Units/releases/tag/0.1.0).
 
 ## ESPressio Development Platform
 
@@ -56,14 +56,23 @@ The namespace currently provides the following (*click the declaration to naviga
 
 ## Platformio.ini
 
-Until the first stable release is published, the development sources can be included directly from GitHub:
+You can add the latest compatible `0.1.x` release to a PlatformIO project with:
+
+```ini
+lib_deps =
+    flowduino/ESPressio-Units@^0.1.0
+```
+
+Alternatively, the latest development sources can be included directly from
+GitHub:
 
 ```ini
 lib_deps =
     https://github.com/Flowduino/ESPressio-Units.git
 ```
 
-Please note that this uses the latest development commit, so the API may change without notice before the first stable release.
+The GitHub form follows the latest repository commit rather than a released
+version, so it may include changes that have not yet received a release tag.
 
 ## Understanding Units
 
@@ -412,9 +421,10 @@ String displayValue = mass.AsString(
 
 Full unit names remain singular in accordance with SI unit-name convention. Numeric formatting uses sufficient significant digits to preserve the stored numeric representation without introducing a fixed number of trailing decimal places. Generic units whose context is `UnitContext::Unknown` or `UnitContext::Other` output only their numeric value because those contexts have no defined unit representation.
 
-## Planned Unit Coverage
+## Unit Coverage
 
-The initial design will consider the following quantity families:
+Version 0.1.0 includes strongly typed coverage for 83 physical quantity
+contexts, including the following commonly used families:
 
 | Quantity | SI unit | Symbol | Example scaled units |
 |---|---|---:|---|
@@ -431,7 +441,9 @@ The initial design will consider the following quantity families:
 | Frequency | hertz | `Hz` | kilohertz, megahertz, gigahertz |
 | Storage capacity | byte | `B` | kilobytes, megabytes, gigabytes |
 
-This list is an initial roadmap rather than a limitation on the eventual library scope.
+This table is a concise selection rather than the complete catalogue. See the
+[Unit Conversion Reference](docs/UNIT_CONVERSIONS.md) for every specialised
+context and its compatible conversions.
 
 ## Design Goals
 
@@ -534,15 +546,11 @@ cmake -S tests -B build/tests \
 
 The tests use a minimal host-side Arduino `String` stub and require no embedded hardware or external test framework.
 
-## Development Status
+## Release Status
 
-This repository is in its initial scaffolding phase. Planned next steps include defining:
-
-1. The common quantity and unit type model.
-2. Numeric representation and conversion policies.
-3. Time types and their supported scales.
-4. Dimensional arithmetic and comparison rules.
-5. Remaining SI base and derived quantity families.
-6. Host-based tests covering conversions, boundaries, precision, and invalid operations.
-
-Contributions and design discussion are welcome while these contracts are being established.
+Version 0.1.0 is the initial public release of ESPressio Units. It includes the
+common contextual unit model, all supported SI orders of magnitude, 83
+specialised quantity types, predefined time magnitudes, checked and explicitly
+unchecked magnitude conversion, nearest-whole-magnitude representation,
+strongly typed physical formulas, string formatting, and host-based behavioral,
+negative, exception, and sanitizer tests.
