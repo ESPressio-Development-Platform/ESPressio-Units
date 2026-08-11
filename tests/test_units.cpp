@@ -400,6 +400,40 @@ namespace {
 
 int main() {
     TestState state;
+
+#define ASSERT_TIME_MAGNITUDE(TypeName, Magnitude) \
+    static_assert( \
+        TypeName<double>::baseOrderOfMagnitude == Magnitude, \
+        #TypeName " must use " #Magnitude " as its base magnitude" \
+    )
+
+    ASSERT_TIME_MAGNITUDE(QuectoSeconds, Quecto);
+    ASSERT_TIME_MAGNITUDE(RontoSeconds, Ronto);
+    ASSERT_TIME_MAGNITUDE(YoctoSeconds, Yocto);
+    ASSERT_TIME_MAGNITUDE(ZeptoSeconds, Zepto);
+    ASSERT_TIME_MAGNITUDE(AttoSeconds, Atto);
+    ASSERT_TIME_MAGNITUDE(FemtoSeconds, Femto);
+    ASSERT_TIME_MAGNITUDE(PicoSeconds, Pico);
+    ASSERT_TIME_MAGNITUDE(NanoSeconds, Nano);
+    ASSERT_TIME_MAGNITUDE(MicroSeconds, Micro);
+    ASSERT_TIME_MAGNITUDE(MilliSeconds, Milli);
+    ASSERT_TIME_MAGNITUDE(CentiSeconds, Centi);
+    ASSERT_TIME_MAGNITUDE(DeciSeconds, Deci);
+    ASSERT_TIME_MAGNITUDE(Seconds, Base);
+    ASSERT_TIME_MAGNITUDE(DecaSeconds, Deca);
+    ASSERT_TIME_MAGNITUDE(HectoSeconds, Hecto);
+    ASSERT_TIME_MAGNITUDE(KiloSeconds, Kilo);
+    ASSERT_TIME_MAGNITUDE(MegaSeconds, Mega);
+    ASSERT_TIME_MAGNITUDE(GigaSeconds, Giga);
+    ASSERT_TIME_MAGNITUDE(TeraSeconds, Tera);
+    ASSERT_TIME_MAGNITUDE(PetaSeconds, Peta);
+    ASSERT_TIME_MAGNITUDE(ExaSeconds, Exa);
+    ASSERT_TIME_MAGNITUDE(ZettaSeconds, Zetta);
+    ASSERT_TIME_MAGNITUDE(YottaSeconds, Yotta);
+    ASSERT_TIME_MAGNITUDE(RonnaSeconds, Ronna);
+    ASSERT_TIME_MAGNITUDE(QuettaSeconds, Quetta);
+
+#undef ASSERT_TIME_MAGNITUDE
     TestMagnitudeRepresentations(state);
     TestFallbackContexts(state);
     RunUnitTypeTests<Dimensionless<double>, UnitContext::Dimensionless, Base>(state, "Dimensionless", "1", "one");
@@ -501,4 +535,3 @@ int main() {
 
     return state.failures == 0 ? 0 : 1;
 }
-

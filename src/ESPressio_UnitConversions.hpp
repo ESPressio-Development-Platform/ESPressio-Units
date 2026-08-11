@@ -16,6 +16,74 @@ namespace ESPressio {
             constexpr long double Pi =
                 3.141592653589793238462643383279502884L;
 
+            template <UnitContext TContext>
+            struct UnitContextCanonicalMagnitude {
+                static constexpr UnitOrderOfMagnitude value = Base;
+            };
+
+            template <>
+            struct UnitContextCanonicalMagnitude<UnitContext::Mass> {
+                static constexpr UnitOrderOfMagnitude value = Kilo;
+            };
+
+            template <>
+            struct UnitContextCanonicalMagnitude<UnitContext::Density> {
+                static constexpr UnitOrderOfMagnitude value = Kilo;
+            };
+
+            template <>
+            struct UnitContextCanonicalMagnitude<UnitContext::MassDensity> {
+                static constexpr UnitOrderOfMagnitude value = Kilo;
+            };
+
+            template <>
+            struct UnitContextCanonicalMagnitude<UnitContext::SurfaceDensity> {
+                static constexpr UnitOrderOfMagnitude value = Kilo;
+            };
+
+            template <>
+            struct UnitContextCanonicalMagnitude<UnitContext::MassConcentration> {
+                static constexpr UnitOrderOfMagnitude value = Kilo;
+            };
+
+            template <>
+            struct UnitContextCanonicalMagnitude<UnitContext::SpecificVolume> {
+                static constexpr UnitOrderOfMagnitude value = Milli;
+            };
+
+            template <>
+            struct UnitContextCanonicalMagnitude<UnitContext::SpecificEnergy> {
+                static constexpr UnitOrderOfMagnitude value = Milli;
+            };
+
+            template <>
+            struct UnitContextCanonicalMagnitude<
+                UnitContext::SpecificHeatCapacity
+            > {
+                static constexpr UnitOrderOfMagnitude value = Milli;
+            };
+
+            template <>
+            struct UnitContextCanonicalMagnitude<UnitContext::SpecificEntropy> {
+                static constexpr UnitOrderOfMagnitude value = Milli;
+            };
+
+            template <>
+            struct UnitContextCanonicalMagnitude<UnitContext::Exposure> {
+                static constexpr UnitOrderOfMagnitude value = Milli;
+            };
+
+            inline long double ConvertMagnitudeValue(
+                long double value,
+                UnitOrderOfMagnitude source,
+                UnitOrderOfMagnitude target
+            ) {
+                return value * std::pow(
+                    10.0L,
+                    static_cast<int>(source) - static_cast<int>(target)
+                );
+            }
+
             inline long double SafeDivide(
                 long double numerator,
                 long double denominator
@@ -31,7 +99,7 @@ namespace ESPressio {
             template <typename TUnit>
             long double CanonicalValue(const TUnit& unit) {
                 return unit.template ToMagnitude<long double>(
-                    TUnit::baseOrderOfMagnitude
+                    UnitContextCanonicalMagnitude<TUnit::context>::value
                 );
             }
 
@@ -139,8 +207,16 @@ namespace ESPressio {
                         std::decay<TInputs>::type::context...
                     >::Calculate(inputs...);
 
+                    const long double storedValue = ConvertMagnitudeValue(
+                        calculatedValue,
+                        UnitContextCanonicalMagnitude<
+                            TTargetContext
+                        >::value,
+                        TDerived::baseOrderOfMagnitude
+                    );
+
                     return TDerived(
-                        CheckedUnitResult<TValue>(calculatedValue)
+                        CheckedUnitResult<TValue>(storedValue)
                     );
                 }
             };

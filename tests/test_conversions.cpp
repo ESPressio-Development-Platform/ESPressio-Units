@@ -2211,6 +2211,25 @@ int main() {
     }
     ++checks;
 
+    const Velocity<double> predefinedMagnitudeInput =
+        Velocity<double>::From(
+            Distance<double>(100.0), MilliSeconds<double>(500.0)
+        );
+    if (std::fabs(predefinedMagnitudeInput.value - 200.0) > 1.0e-12) {
+        std::cerr << "Predefined time input normalization failed\n";
+        return 1;
+    }
+    ++checks;
+
+    const MilliSeconds<double> predefinedMagnitudeResult =
+        MilliSeconds<double>::From(Frequency<double>(2.0));
+    if (std::fabs(predefinedMagnitudeResult.value - 500.0) > 1.0e-12 ||
+        predefinedMagnitudeResult.orderOfMagnitude != Milli) {
+        std::cerr << "Predefined time result scaling failed\n";
+        return 1;
+    }
+    ++checks;
+
     const Velocity<int> rounded = Velocity<int>::From(
         Distance<double>(5.0), Time<double>(2.0)
     );

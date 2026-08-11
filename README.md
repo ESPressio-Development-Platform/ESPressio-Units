@@ -227,6 +227,38 @@ Time<unsigned long> seconds(5);          // 5 seconds (Base)
 Time<unsigned long> milliseconds(500, Milli); // 500 milliseconds
 ```
 
+Because time is especially common in embedded APIs, `ESPressio_Time.hpp` also
+provides predefined magnitude types. Their constructors default to the magnitude
+expressed by the type name:
+
+```cpp
+Seconds<unsigned long> interval(5);          // 5 seconds
+MilliSeconds<unsigned long> timeout(500);    // 500 milliseconds
+MicroSeconds<unsigned long> sampleTime(250); // 250 microseconds
+```
+
+`Time<TValue>` remains source-compatible and is equivalent to
+`Seconds<TValue>`. A second template argument can also select a magnitude
+directly: `Time<TValue, Milli>` is the same type as
+`MilliSeconds<TValue>`.
+
+Aliases are provided for every supported SI magnitude:
+
+| Magnitudes | Predefined time types |
+|---|---|
+| 10^-30 through 10^-18 | `QuectoSeconds`, `RontoSeconds`, `YoctoSeconds`, `ZeptoSeconds`, `AttoSeconds` |
+| 10^-15 through 10^-6 | `FemtoSeconds`, `PicoSeconds`, `NanoSeconds`, `MicroSeconds` |
+| 10^-3 through 10^-1 | `MilliSeconds`, `CentiSeconds`, `DeciSeconds` |
+| 10^0 | `Seconds` |
+| 10^1 through 10^9 | `DecaSeconds`, `HectoSeconds`, `KiloSeconds`, `MegaSeconds`, `GigaSeconds` |
+| 10^12 through 10^24 | `TeraSeconds`, `PetaSeconds`, `ExaSeconds`, `ZettaSeconds`, `YottaSeconds` |
+| 10^27 through 10^30 | `RonnaSeconds`, `QuettaSeconds` |
+
+Predefined time types participate in typed formulas without losing their scale.
+For example, a `MilliSeconds<double>(500)` operand is normalized to 0.5 seconds
+when calculating velocity, while `MilliSeconds<double>::From(Frequency<double>(2))`
+produces a stored value of 500 milliseconds.
+
 `SetValue()` can subsequently replace either the numeric value alone or both the value and the magnitude it represents:
 
 ```cpp
