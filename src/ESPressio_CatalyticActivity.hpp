@@ -11,6 +11,10 @@ namespace ESPressio {
             TValue,
             Base,
             UnitContext::CatalyticActivity
+        >, public Internal::UnitFactory<
+            CatalyticActivity<TValue>,
+            TValue,
+            UnitContext::CatalyticActivity
         > {
             using Unit<
                 TValue,

@@ -11,6 +11,10 @@ namespace ESPressio {
             TValue,
             Base,
             UnitContext::SurfaceChargeDensity
+        >, public Internal::UnitFactory<
+            SurfaceChargeDensity<TValue>,
+            TValue,
+            UnitContext::SurfaceChargeDensity
         > {
             using Unit<
                 TValue,

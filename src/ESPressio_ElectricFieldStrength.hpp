@@ -11,6 +11,10 @@ namespace ESPressio {
             TValue,
             Base,
             UnitContext::ElectricFieldStrength
+        >, public Internal::UnitFactory<
+            ElectricFieldStrength<TValue>,
+            TValue,
+            UnitContext::ElectricFieldStrength
         > {
             using Unit<
                 TValue,

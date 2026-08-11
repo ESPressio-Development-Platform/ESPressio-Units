@@ -11,6 +11,10 @@ namespace ESPressio {
             TValue,
             Milli,
             UnitContext::SpecificVolume
+        >, public Internal::UnitFactory<
+            SpecificVolume<TValue>,
+            TValue,
+            UnitContext::SpecificVolume
         > {
             using Unit<
                 TValue,

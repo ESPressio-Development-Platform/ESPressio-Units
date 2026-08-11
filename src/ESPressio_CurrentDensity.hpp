@@ -11,6 +11,10 @@ namespace ESPressio {
             TValue,
             Base,
             UnitContext::CurrentDensity
+        >, public Internal::UnitFactory<
+            CurrentDensity<TValue>,
+            TValue,
+            UnitContext::CurrentDensity
         > {
             using Unit<
                 TValue,

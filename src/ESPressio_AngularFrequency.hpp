@@ -11,6 +11,10 @@ namespace ESPressio {
             TValue,
             Base,
             UnitContext::AngularFrequency
+        >, public Internal::UnitFactory<
+            AngularFrequency<TValue>,
+            TValue,
+            UnitContext::AngularFrequency
         > {
             using Unit<
                 TValue,

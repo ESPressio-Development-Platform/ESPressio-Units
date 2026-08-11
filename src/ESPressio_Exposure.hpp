@@ -11,6 +11,10 @@ namespace ESPressio {
             TValue,
             Milli,
             UnitContext::Exposure
+        >, public Internal::UnitFactory<
+            Exposure<TValue>,
+            TValue,
+            UnitContext::Exposure
         > {
             using Unit<
                 TValue,

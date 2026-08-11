@@ -11,6 +11,10 @@ namespace ESPressio {
             TValue,
             Base,
             UnitContext::HeatCapacity
+        >, public Internal::UnitFactory<
+            HeatCapacity<TValue>,
+            TValue,
+            UnitContext::HeatCapacity
         > {
             using Unit<
                 TValue,

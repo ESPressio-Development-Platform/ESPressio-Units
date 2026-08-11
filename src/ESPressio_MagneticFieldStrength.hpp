@@ -11,6 +11,10 @@ namespace ESPressio {
             TValue,
             Base,
             UnitContext::MagneticFieldStrength
+        >, public Internal::UnitFactory<
+            MagneticFieldStrength<TValue>,
+            TValue,
+            UnitContext::MagneticFieldStrength
         > {
             using Unit<
                 TValue,

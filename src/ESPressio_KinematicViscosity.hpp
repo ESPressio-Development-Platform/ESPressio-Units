@@ -11,6 +11,10 @@ namespace ESPressio {
             TValue,
             Base,
             UnitContext::KinematicViscosity
+        >, public Internal::UnitFactory<
+            KinematicViscosity<TValue>,
+            TValue,
+            UnitContext::KinematicViscosity
         > {
             using Unit<
                 TValue,

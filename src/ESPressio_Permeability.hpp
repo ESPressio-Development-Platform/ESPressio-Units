@@ -11,6 +11,10 @@ namespace ESPressio {
             TValue,
             Base,
             UnitContext::Permeability
+        >, public Internal::UnitFactory<
+            Permeability<TValue>,
+            TValue,
+            UnitContext::Permeability
         > {
             using Unit<
                 TValue,

@@ -11,6 +11,10 @@ namespace ESPressio {
             TValue,
             Base,
             UnitContext::Force
+        >, public Internal::UnitFactory<
+            Force<TValue>,
+            TValue,
+            UnitContext::Force
         > {
             using Unit<
                 TValue,

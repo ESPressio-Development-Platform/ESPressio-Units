@@ -11,6 +11,10 @@ namespace ESPressio {
             TValue,
             Base,
             UnitContext::MechanicalStress
+        >, public Internal::UnitFactory<
+            MechanicalStress<TValue>,
+            TValue,
+            UnitContext::MechanicalStress
         > {
             using Unit<
                 TValue,

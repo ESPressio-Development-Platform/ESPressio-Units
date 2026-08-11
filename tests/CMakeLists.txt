@@ -4,25 +4,37 @@ project(ESPressioUnitsTests LANGUAGES CXX)
 option(ESPRESSIO_ENABLE_COVERAGE "Enable source coverage instrumentation" OFF)
 option(ESPRESSIO_ENABLE_SANITIZERS "Enable address and undefined-behavior sanitizers" OFF)
 
-add_executable(espressio_units_tests test_units.cpp)
-target_include_directories(espressio_units_tests PRIVATE
-    stubs
-    ../src
+set(ESPRESSIO_TEST_TARGETS
+    espressio_units_tests
+    espressio_conversion_tests
 )
-target_compile_features(espressio_units_tests PRIVATE cxx_std_11)
+
+add_executable(espressio_units_tests test_units.cpp)
+add_executable(espressio_conversion_tests test_conversions.cpp)
+
+foreach(TEST_TARGET IN LISTS ESPRESSIO_TEST_TARGETS)
+    target_include_directories(${TEST_TARGET} PRIVATE stubs ../src)
+    target_compile_features(${TEST_TARGET} PRIVATE cxx_std_11)
+endforeach()
 
 if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
-    target_compile_options(espressio_units_tests PRIVATE
-        -Wall -Wextra -Wpedantic -Werror
-    )
+    foreach(TEST_TARGET IN LISTS ESPRESSIO_TEST_TARGETS)
+        target_compile_options(${TEST_TARGET} PRIVATE
+            -Wall -Wextra -Wpedantic -Werror
+        )
+    endforeach()
 elseif(MSVC)
-    target_compile_options(espressio_units_tests PRIVATE /W4 /WX)
+    foreach(TEST_TARGET IN LISTS ESPRESSIO_TEST_TARGETS)
+        target_compile_options(${TEST_TARGET} PRIVATE /W4 /WX)
+    endforeach()
 endif()
 
 if(ESPRESSIO_ENABLE_COVERAGE)
     if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
-        target_compile_options(espressio_units_tests PRIVATE -O0 -g --coverage)
-        target_link_options(espressio_units_tests PRIVATE --coverage)
+        foreach(TEST_TARGET IN LISTS ESPRESSIO_TEST_TARGETS)
+            target_compile_options(${TEST_TARGET} PRIVATE -O0 -g --coverage)
+            target_link_options(${TEST_TARGET} PRIVATE --coverage)
+        endforeach()
     else()
         message(FATAL_ERROR "Coverage is supported only with GCC or Clang")
     endif()
@@ -30,12 +42,14 @@ endif()
 
 if(ESPRESSIO_ENABLE_SANITIZERS)
     if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
-        target_compile_options(espressio_units_tests PRIVATE
-            -fsanitize=address,undefined -fno-omit-frame-pointer
-        )
-        target_link_options(espressio_units_tests PRIVATE
-            -fsanitize=address,undefined
-        )
+        foreach(TEST_TARGET IN LISTS ESPRESSIO_TEST_TARGETS)
+            target_compile_options(${TEST_TARGET} PRIVATE
+                -fsanitize=address,undefined -fno-omit-frame-pointer
+            )
+            target_link_options(${TEST_TARGET} PRIVATE
+                -fsanitize=address,undefined
+            )
+        endforeach()
     else()
         message(FATAL_ERROR "Sanitizers are supported only with GCC or Clang")
     endif()
@@ -43,3 +57,4 @@ endif()
 
 enable_testing()
 add_test(NAME espressio_units_tests COMMAND espressio_units_tests)
+add_test(NAME espressio_conversion_tests COMMAND espressio_conversion_tests)

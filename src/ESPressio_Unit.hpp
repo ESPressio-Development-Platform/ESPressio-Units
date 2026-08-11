@@ -9,6 +9,7 @@
 #include <type_traits>
 
 #include "ESPressio_UnitEnums.hpp"
+#include "ESPressio_UnitConversions.hpp"
 
 namespace ESPressio {
 
@@ -120,6 +121,27 @@ namespace ESPressio {
                 }
 
                 return static_cast<TResult>(convertedValue);
+            }
+
+            template <
+                template <typename> class TTarget,
+                typename TResult = double
+            >
+            typename std::enable_if<
+                IsDirectUnitContextConversion<
+                    TContext,
+                    TTarget<TResult>::context
+                >::value,
+                TTarget<TResult>
+            >::type ToContext() const {
+                const long double convertedValue =
+                    _toMagnitudeAsLongDouble(
+                        TTarget<TResult>::baseOrderOfMagnitude
+                    );
+
+                return TTarget<TResult>(
+                    Internal::CheckedUnitResult<TResult>(convertedValue)
+                );
             }
 
             template <typename TResult>

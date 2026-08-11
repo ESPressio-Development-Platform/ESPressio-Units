@@ -11,6 +11,10 @@ namespace ESPressio {
             TValue,
             Base,
             UnitContext::ElectricCurrent
+        >, public Internal::UnitFactory<
+            ElectricCurrent<TValue>,
+            TValue,
+            UnitContext::ElectricCurrent
         > {
             using Unit<
                 TValue,

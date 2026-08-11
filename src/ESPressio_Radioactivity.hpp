@@ -11,6 +11,10 @@ namespace ESPressio {
             TValue,
             Base,
             UnitContext::Radioactivity
+        >, public Internal::UnitFactory<
+            Radioactivity<TValue>,
+            TValue,
+            UnitContext::Radioactivity
         > {
             using Unit<
                 TValue,

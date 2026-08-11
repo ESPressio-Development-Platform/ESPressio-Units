@@ -11,6 +11,10 @@ namespace ESPressio {
             TValue,
             Base,
             UnitContext::Permittivity
+        >, public Internal::UnitFactory<
+            Permittivity<TValue>,
+            TValue,
+            UnitContext::Permittivity
         > {
             using Unit<
                 TValue,

@@ -11,6 +11,10 @@ namespace ESPressio {
             TValue,
             Base,
             UnitContext::MolarEnergy
+        >, public Internal::UnitFactory<
+            MolarEnergy<TValue>,
+            TValue,
+            UnitContext::MolarEnergy
         > {
             using Unit<
                 TValue,

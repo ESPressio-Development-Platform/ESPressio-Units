@@ -11,6 +11,10 @@ namespace ESPressio {
             TValue,
             Base,
             UnitContext::StorageCapacity
+        >, public Internal::UnitFactory<
+            StorageCapacity<TValue>,
+            TValue,
+            UnitContext::StorageCapacity
         > {
             using Unit<
                 TValue,

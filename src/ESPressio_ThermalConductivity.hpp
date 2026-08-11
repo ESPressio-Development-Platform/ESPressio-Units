@@ -11,6 +11,10 @@ namespace ESPressio {
             TValue,
             Base,
             UnitContext::ThermalConductivity
+        >, public Internal::UnitFactory<
+            ThermalConductivity<TValue>,
+            TValue,
+            UnitContext::ThermalConductivity
         > {
             using Unit<
                 TValue,

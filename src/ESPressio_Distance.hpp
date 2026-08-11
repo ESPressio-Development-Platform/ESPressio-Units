@@ -11,6 +11,10 @@ namespace ESPressio {
             TValue,
             Base,
             UnitContext::Distance
+        >, public Internal::UnitFactory<
+            Distance<TValue>,
+            TValue,
+            UnitContext::Distance
         > {
             using Unit<
                 TValue,

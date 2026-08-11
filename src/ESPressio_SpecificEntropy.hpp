@@ -11,6 +11,10 @@ namespace ESPressio {
             TValue,
             Milli,
             UnitContext::SpecificEntropy
+        >, public Internal::UnitFactory<
+            SpecificEntropy<TValue>,
+            TValue,
+            UnitContext::SpecificEntropy
         > {
             using Unit<
                 TValue,

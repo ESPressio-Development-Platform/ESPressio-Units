@@ -11,6 +11,10 @@ namespace ESPressio {
             TValue,
             Base,
             UnitContext::ElectricPotentialDifference
+        >, public Internal::UnitFactory<
+            ElectricPotentialDifference<TValue>,
+            TValue,
+            UnitContext::ElectricPotentialDifference
         > {
             using Unit<
                 TValue,

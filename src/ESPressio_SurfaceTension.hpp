@@ -11,6 +11,10 @@ namespace ESPressio {
             TValue,
             Base,
             UnitContext::SurfaceTension
+        >, public Internal::UnitFactory<
+            SurfaceTension<TValue>,
+            TValue,
+            UnitContext::SurfaceTension
         > {
             using Unit<
                 TValue,

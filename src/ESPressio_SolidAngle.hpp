@@ -11,6 +11,10 @@ namespace ESPressio {
             TValue,
             Base,
             UnitContext::SolidAngle
+        >, public Internal::UnitFactory<
+            SolidAngle<TValue>,
+            TValue,
+            UnitContext::SolidAngle
         > {
             using Unit<
                 TValue,

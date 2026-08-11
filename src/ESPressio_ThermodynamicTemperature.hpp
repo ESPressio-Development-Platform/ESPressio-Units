@@ -11,6 +11,10 @@ namespace ESPressio {
             TValue,
             Base,
             UnitContext::ThermodynamicTemperature
+        >, public Internal::UnitFactory<
+            ThermodynamicTemperature<TValue>,
+            TValue,
+            UnitContext::ThermodynamicTemperature
         > {
             using Unit<
                 TValue,

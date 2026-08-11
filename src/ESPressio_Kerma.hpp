@@ -11,6 +11,10 @@ namespace ESPressio {
             TValue,
             Base,
             UnitContext::Kerma
+        >, public Internal::UnitFactory<
+            Kerma<TValue>,
+            TValue,
+            UnitContext::Kerma
         > {
             using Unit<
                 TValue,

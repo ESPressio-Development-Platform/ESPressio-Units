@@ -51,6 +51,8 @@ The namespace currently provides the following (*click the declaration to naviga
 - [`ESPressio::Units::UnitContext`](#unitcontext)
 - `ESPressio::Units::UnitRepresentation`
 - [`ESPressio::Units::Unit<TValue, TBaseOrderOfMagnitude, TContext>`](#unittvalue)
+- [Strongly-typed context conversions](#strongly-typed-context-conversions)
+- [Complete conversion reference](docs/UNIT_CONVERSIONS.md)
 
 ## Platformio.ini
 
@@ -367,9 +369,48 @@ Distance<double> distance(1250.0, Milli);
 double metres = distance.ToMagnitude(Base); // 1.25
 ```
 
+## Strongly-Typed Context Conversions
+
+Equivalent contexts can be converted directly with `ToContext`. The target is
+provided as a unit-type template and the optional result type defaults to
+`double`:
+
+```cpp
+Length<long> length(1250, Milli);
+Distance<double> distance = length.ToContext<Distance>();
+```
+
+Contexts calculated from other physical quantities expose a static `From`
+factory. Every operand must be the correct specialised unit type; an unqualified
+number or a dimensionally invalid type combination is rejected at compile time:
+
+```cpp
+Distance<double> distance(100.0, Base); // 100 metres
+Time<unsigned long> elapsed(500, Milli); // 500 milliseconds
+
+Velocity<double> velocity = Velocity<double>::From(distance, elapsed);
+// 200 metres per second, stored at Velocity's canonical magnitude
+```
+
+Each operand is normalized to its own type's canonical magnitude before the
+formula is evaluated using `long double`. The result is range-checked, converted
+to the target numeric type, and stored at the target context's canonical
+magnitude. Integral targets use the same nearest-integer rounding policy as
+`ToMagnitude`; division by zero raises `std::domain_error`, while an
+out-of-range result raises `std::overflow_error`.
+
+The generated [Unit Conversion Reference](docs/UNIT_CONVERSIONS.md) documents
+the direct targets and every supported `From(...)` signature for each of the 83
+specialised unit types. Regenerate that reference and its exhaustive registry
+test after changing the conversion registry:
+
+```sh
+python3 tools/generate_conversion_assets.py
+```
+
 ## Tests
 
-The host-based test suite applies the same behavioral contract to every specialised context type. Each of the 83 types receives 16 positive and 10 negative checks covering construction, compile-time metadata, setters, magnitude conversion, numeric result types, rounding, overflow handling, negative values, and both string representations. Additional checks cover every SI magnitude prefix and the fallback contexts.
+The host-based test suite applies the same behavioral contract to every specialised context type. Each of the 83 types receives 16 positive and 10 negative checks covering construction, compile-time metadata, setters, magnitude conversion, numeric result types, rounding, overflow handling, negative values, and both string representations. Additional checks cover every SI magnitude prefix and the fallback contexts. A generated conversion suite also instantiates every registered formula and direct conversion, verifies canonical result magnitudes, confirms cross-magnitude normalization and zero-division handling, and proves that raw or dimensionally invalid inputs are rejected at compile time.
 
 Run the suite with CMake and CTest:
 

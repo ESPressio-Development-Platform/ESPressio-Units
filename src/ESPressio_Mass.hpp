@@ -11,6 +11,10 @@ namespace ESPressio {
             TValue,
             Kilo,
             UnitContext::Mass
+        >, public Internal::UnitFactory<
+            Mass<TValue>,
+            TValue,
+            UnitContext::Mass
         > {
             using Unit<
                 TValue,

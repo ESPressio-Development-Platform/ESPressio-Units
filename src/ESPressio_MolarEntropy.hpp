@@ -11,6 +11,10 @@ namespace ESPressio {
             TValue,
             Base,
             UnitContext::MolarEntropy
+        >, public Internal::UnitFactory<
+            MolarEntropy<TValue>,
+            TValue,
+            UnitContext::MolarEntropy
         > {
             using Unit<
                 TValue,

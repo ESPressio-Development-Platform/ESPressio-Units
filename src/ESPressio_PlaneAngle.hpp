@@ -11,6 +11,10 @@ namespace ESPressio {
             TValue,
             Base,
             UnitContext::PlaneAngle
+        >, public Internal::UnitFactory<
+            PlaneAngle<TValue>,
+            TValue,
+            UnitContext::PlaneAngle
         > {
             using Unit<
                 TValue,
