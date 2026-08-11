@@ -3,6 +3,7 @@
 #include <Arduino.h>
 
 #include <cmath>
+#include <cstddef>
 #include <cstdio>
 #include <limits>
 #include <stdexcept>
@@ -99,6 +100,87 @@ namespace ESPressio {
             ) const {
                 return ToMagnitudeUnchecked<double>(
                     targetOrderOfMagnitude
+                );
+            }
+
+            UnitOrderOfMagnitude GetNearestWholeMagnitude() const {
+                if (value == static_cast<TValue>(0)) {
+                    return orderOfMagnitude;
+                }
+
+                static const UnitOrderOfMagnitude engineeringMagnitudes[] = {
+                    Quetta,
+                    Ronna,
+                    Yotta,
+                    Zetta,
+                    Exa,
+                    Peta,
+                    Tera,
+                    Giga,
+                    Mega,
+                    Kilo,
+                    Base,
+                    Milli,
+                    Micro,
+                    Nano,
+                    Pico,
+                    Femto,
+                    Atto,
+                    Zepto,
+                    Yocto,
+                    Ronto,
+                    Quecto
+                };
+
+                const long double absoluteValue = std::fabs(
+                    static_cast<long double>(value)
+                );
+
+                if (!std::isfinite(absoluteValue)) {
+                    throw std::domain_error(
+                        "A nearest whole magnitude requires a finite value"
+                    );
+                }
+
+                for (
+                    std::size_t index = 0;
+                    index < sizeof(engineeringMagnitudes) /
+                        sizeof(engineeringMagnitudes[0]);
+                    ++index
+                ) {
+                    const UnitOrderOfMagnitude candidate =
+                        engineeringMagnitudes[index];
+                    const long double convertedAbsoluteValue =
+                        Internal::ConvertMagnitudeValue(
+                            absoluteValue,
+                            orderOfMagnitude,
+                            candidate
+                        );
+
+                    if (convertedAbsoluteValue >= 0.5L) {
+                        return candidate;
+                    }
+                }
+
+                return Quecto;
+            }
+
+            template <typename TResult = double>
+            Unit<
+                TResult,
+                TBaseOrderOfMagnitude,
+                TContext
+            > ToNearestWholeMagnitude() const {
+                const UnitOrderOfMagnitude nearestMagnitude =
+                    GetNearestWholeMagnitude();
+
+                return Unit<
+                    TResult,
+                    TBaseOrderOfMagnitude,
+                    TContext
+                >(
+                    ToMagnitude<TResult>(nearestMagnitude),
+                    nearestMagnitude
                 );
             }
 

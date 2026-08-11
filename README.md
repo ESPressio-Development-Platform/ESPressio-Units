@@ -345,6 +345,45 @@ checks. The caller must guarantee that the result is representable by
 `TResult`; converting an out-of-range floating-point value to an integral type
 has undefined behavior in C++.
 
+### Nearest Whole Magnitude
+
+`ToNearestWholeMagnitude<TResult>()` returns a contextual `Unit` whose magnitude
+is selected from the engineering SI magnitudes in steps of 10^3. The original
+object is not modified and the result type defaults to `double`, preserving
+fractional values:
+
+```cpp
+StorageCapacity<int> firstSize(499);
+StorageCapacity<int> secondSize(500);
+StorageCapacity<int> thirdSize(2400, Kilo);
+
+auto first = firstSize.ToNearestWholeMagnitude();
+// 499 B
+
+auto second = secondSize.ToNearestWholeMagnitude();
+// 0.5 kB
+
+auto third = thirdSize.ToNearestWholeMagnitude();
+// 2.4 MB
+```
+
+The magnitude moves upward at the halfway point to the next engineering scale.
+Consequently, 499 bytes remain bytes while 500 bytes become 0.5 kilobytes.
+Selection uses the absolute value, so negative quantities follow the same
+boundary while retaining their sign. Zero retains its existing magnitude.
+Non-finite floating-point values raise `std::domain_error`.
+
+An integral result can be requested explicitly and follows the existing
+nearest-integer rounding policy:
+
+```cpp
+auto rounded = secondSize.ToNearestWholeMagnitude<int>();
+// 1 kB: 0.5 rounds away from zero to 1
+```
+
+`GetNearestWholeMagnitude()` returns only the selected
+`UnitOrderOfMagnitude` when the converted value itself is not required.
+
 Floating-point results retain the precision supported by the requested type. Integral results use nearest-integer rounding, with halfway values rounded away from zero: `1.4` becomes `1`, `1.5` becomes `2`, and `-1.5` becomes `-2`.
 
 `bool` and non-numeric result types are rejected at compile time. A conversion which exceeds the range of the requested numeric result type throws `std::overflow_error` rather than performing an unsafe or undefined conversion.

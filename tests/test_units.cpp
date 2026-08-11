@@ -434,6 +434,103 @@ int main() {
     ASSERT_TIME_MAGNITUDE(QuettaSeconds, Quetta);
 
 #undef ASSERT_TIME_MAGNITUDE
+
+    const Unit<double, Base, UnitContext::StorageCapacity>
+        bytesBelowThreshold = StorageCapacity<int>(499)
+            .ToNearestWholeMagnitude();
+    state.Check(
+        bytesBelowThreshold.orderOfMagnitude == Base &&
+            AlmostEqual(bytesBelowThreshold.value, 499.0L),
+        "StorageCapacity",
+        "499 bytes remain bytes",
+        false
+    );
+
+    const Unit<double, Base, UnitContext::StorageCapacity>
+        bytesAtThreshold = StorageCapacity<int>(500)
+            .ToNearestWholeMagnitude();
+    state.Check(
+        bytesAtThreshold.orderOfMagnitude == Kilo &&
+            AlmostEqual(bytesAtThreshold.value, 0.5L),
+        "StorageCapacity",
+        "500 bytes become 0.5 kilobytes",
+        false
+    );
+
+    const Unit<double, Base, UnitContext::StorageCapacity>
+        kilobytesToMegabytes = StorageCapacity<int>(2400, Kilo)
+            .ToNearestWholeMagnitude();
+    state.Check(
+        kilobytesToMegabytes.orderOfMagnitude == Mega &&
+            AlmostEqual(kilobytesToMegabytes.value, 2.4L),
+        "StorageCapacity",
+        "2400 kilobytes become 2.4 megabytes",
+        false
+    );
+
+    const Unit<double, Base, UnitContext::StorageCapacity>
+        negativeThreshold = StorageCapacity<int>(-500)
+            .ToNearestWholeMagnitude();
+    state.Check(
+        negativeThreshold.orderOfMagnitude == Kilo &&
+            AlmostEqual(negativeThreshold.value, -0.5L),
+        "StorageCapacity",
+        "negative values use their absolute size",
+        false
+    );
+
+    const Unit<double, Base, UnitContext::StorageCapacity>
+        zeroMagnitude = StorageCapacity<int>(0, Milli)
+            .ToNearestWholeMagnitude();
+    state.Check(
+        zeroMagnitude.orderOfMagnitude == Milli &&
+            AlmostEqual(zeroMagnitude.value, 0.0L),
+        "StorageCapacity",
+        "zero preserves its existing magnitude",
+        false
+    );
+
+    const Unit<int, Base, UnitContext::StorageCapacity>
+        roundedIntegral = StorageCapacity<int>(500)
+            .ToNearestWholeMagnitude<int>();
+    state.Check(
+        roundedIntegral.orderOfMagnitude == Kilo &&
+            roundedIntegral.value == 1,
+        "StorageCapacity",
+        "integral result follows magnitude rounding policy",
+        false
+    );
+
+    state.Check(
+        StorageCapacity<int>(499).GetNearestWholeMagnitude() == Base &&
+            StorageCapacity<int>(500).GetNearestWholeMagnitude() == Kilo,
+        "StorageCapacity",
+        "nearest magnitude boundary is exposed independently",
+        false
+    );
+
+    state.Check(
+        StorageCapacity<double>(50.0, Deca)
+                .GetNearestWholeMagnitude() == Kilo,
+        "StorageCapacity",
+        "non-engineering input magnitude normalizes to engineering magnitude",
+        false
+    );
+
+    bool nonFiniteMagnitudeRejected = false;
+    try {
+        (void) StorageCapacity<double>(
+            std::numeric_limits<double>::infinity()
+        ).GetNearestWholeMagnitude();
+    } catch (const std::domain_error&) {
+        nonFiniteMagnitudeRejected = true;
+    }
+    state.Check(
+        nonFiniteMagnitudeRejected,
+        "StorageCapacity",
+        "non-finite nearest magnitude input is rejected",
+        true
+    );
     TestMagnitudeRepresentations(state);
     TestFallbackContexts(state);
     RunUnitTypeTests<Dimensionless<double>, UnitContext::Dimensionless, Base>(state, "Dimensionless", "1", "one");
