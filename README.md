@@ -7,6 +7,12 @@ Light-weight, expressive, and type-safe physical quantities for microcontroller 
 
 The latest Stable Version is [0.1.0](https://github.com/Flowduino/ESPressio-Units/releases/tag/0.1.0).
 
+## Compatibility
+
+ESPressio Units is designed for Arduino-compatible targets and contains no processor-specific code. It should be compatible with ESP32, ESP8266, RP2040, SAMD, STM32, Renesas, Teensy, and other Arduino cores that provide `Arduino.h`, `String`, floating-point math, and the standard C++ headers used by the library.
+
+Classic AVR targets may compile, but formatted conversion, floating-point operations, exceptions-related library facilities, and extensive template instantiation can consume significant flash and RAM. Verify both compilation and memory use for the specific board. The `architectures=*` and `platforms=*` declarations are intentional and express source portability rather than a guarantee for every core/toolchain combination.
+
 ## ESPressio Development Platform
 
 The **ESPressio** Development Platform is a collection of discrete (sometimes intra-connected) Component Libraries developed with a particular development ethos in mind.
