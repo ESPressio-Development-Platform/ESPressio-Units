@@ -5,7 +5,7 @@ Light-weight, expressive, and type-safe physical quantities for microcontroller 
 
 ## Latest Stable Version
 
-The latest Stable Version is [0.1.0](https://github.com/Flowduino/ESPressio-Units/releases/tag/0.1.0).
+The latest Stable Version is [0.2.0](https://github.com/Flowduino/ESPressio-Units/releases/tag/0.2.0).
 
 ## Compatibility
 
@@ -62,11 +62,11 @@ The namespace currently provides the following (*click the declaration to naviga
 
 ## Platformio.ini
 
-You can add the latest compatible `0.1.x` release to a PlatformIO project with:
+You can add the latest compatible `0.2.x` release to a PlatformIO project with:
 
 ```ini
 lib_deps =
-    flowduino/ESPressio-Units@^0.1.0
+    flowduino/ESPressio-Units@^0.2.0
 ```
 
 Alternatively, the latest development sources can be included directly from
@@ -530,6 +530,164 @@ test after changing the conversion registry:
 python3 tools/generate_conversion_assets.py
 ```
 
+## Optional Serializable Unit Variants
+
+Serializable variants are provided by **ESPressio Units itself** as optional sibling headers.
+
+The ordinary and Serializable APIs deliberately remain separate.
+
+For example, the normal Time types live in:
+
+```text
+ESPressio_Time.hpp
+```
+
+while their Serializable counterparts live in:
+
+```text
+ESPressio_Time_Serializable.hpp
+```
+
+Likewise:
+
+```text
+ESPressio_Distance.hpp
+ESPressio_Distance_Serializable.hpp
+
+ESPressio_Mass.hpp
+ESPressio_Mass_Serializable.hpp
+
+ESPressio_ElectricResistance.hpp
+ESPressio_ElectricResistance_Serializable.hpp
+```
+
+This pattern is provided for every concrete Unit type.
+
+### Ordinary Units remain independent
+
+A project that only uses:
+
+```cpp
+#include <ESPressio_Time.hpp>
+#include <ESPressio_Distance.hpp>
+```
+
+does not require ESPressio Serializable.
+
+The existing types remain unchanged:
+
+```cpp
+Time<uint32_t> interval(5);
+Distance<float> distance(12.5f);
+```
+
+No Serializable base class, metadata, or dependency is introduced into these types.
+
+### Opting into a single Serializable type
+
+A project can include only the Serializable Unit family it needs:
+
+```cpp
+#include <ESPressio_Time_Serializable.hpp>
+
+SerializableMilliSeconds<uint32_t> timeout(500);
+```
+
+or:
+
+```cpp
+#include <ESPressio_Distance_Serializable.hpp>
+
+SerializableDistance<float> distance(12.5f);
+```
+
+Only code that includes one of the `*_Serializable.hpp` headers needs
+ESPressio Serializable as a project dependency.
+
+### Batch import
+
+`ESPressio_SerializableUnits.hpp` has the same responsibility as
+`ESPressio_Units.hpp`: it is an umbrella/batch-import header only.
+
+It contains no Unit implementations or aliases of its own. It simply includes:
+
+```text
+ESPressio_Unit_Serializable.hpp
+ESPressio_Dimensionless_Serializable.hpp
+ESPressio_Ratio_Serializable.hpp
+...
+ESPressio_Time_Serializable.hpp
+...
+ESPressio_Exposure_Serializable.hpp
+```
+
+Therefore:
+
+```cpp
+#include <ESPressio_SerializableUnits.hpp>
+```
+
+makes every Serializable Unit variant available.
+
+### Generic Unit counterpart
+
+The sibling of `ESPressio_Unit.hpp` is:
+
+```text
+ESPressio_Unit_Serializable.hpp
+```
+
+It provides:
+
+```cpp
+SerializableUnit<
+    TValue,
+    TBaseOrderOfMagnitude,
+    TContext
+>
+```
+
+and the common compile-time wrapper machinery used by each concrete Serializable Unit type.
+
+No virtual methods are added to `Unit`.
+
+This is intentional: the existing public inheritance hierarchy is sufficient, and
+ESPressio Serializable itself uses compile-time CRTP/property traversal. Making
+`Unit` polymorphic would introduce a vtable/virtual-dispatch cost into ordinary Unit
+instances without providing any benefit.
+
+### Serialized Unit state
+
+The common public per-instance state remains:
+
+```text
+value
+orderOfMagnitude
+```
+
+`baseOrderOfMagnitude` and `context` are compile-time/static metadata of the Unit
+type itself and are not duplicated into every payload.
+
+### Dependencies
+
+Normal Units project:
+
+```ini
+lib_deps =
+    flowduino/ESPressio-Units
+```
+
+Project using Serializable Unit variants:
+
+```ini
+lib_deps =
+    flowduino/ESPressio-Units
+    flowduino/ESPressio-Serializable@^0.9.0
+```
+
+ESPressio Serializable remains an **optional consumer dependency**, not an
+unconditional dependency of ESPressio Units.
+
 ## Tests
 
 The host-based test suite applies the same behavioral contract to every specialised context type. Each of the 83 types receives 16 positive and 10 negative checks covering construction, compile-time metadata, setters, magnitude conversion, numeric result types, rounding, overflow handling, negative values, and both string representations. Additional checks cover every SI magnitude prefix and the fallback contexts. A generated conversion suite also instantiates every registered formula and direct conversion, verifies canonical result magnitudes, confirms cross-magnitude normalization and zero-division handling, and proves that raw or dimensionally invalid inputs are rejected at compile time.
@@ -554,9 +712,10 @@ The tests use a minimal host-side Arduino `String` stub and require no embedded 
 
 ## Release Status
 
-Version 0.1.0 is the initial public release of ESPressio Units. It includes the
+Version 0.2.0 is the initial public release of ESPressio Units. It includes the
 common contextual unit model, all supported SI orders of magnitude, 83
 specialised quantity types, predefined time magnitudes, checked and explicitly
 unchecked magnitude conversion, nearest-whole-magnitude representation,
 strongly typed physical formulas, string formatting, and host-based behavioral,
 negative, exception, and sanitizer tests.
+It now also includes Serializable versions of each defined Unit Type, leveraging the ESPressio Serializable library... and an example program has now been included to demonstrate this new functionality.
