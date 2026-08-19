@@ -9,7 +9,7 @@
  */
 
 #if !__has_include(<ESPressio_Serializable.hpp>)
-    #error "ESPressio_Unit_Serializable.hpp requires ESPressio-Serializable. Add flowduino/ESPressio-Serializable@^0.9.0 to the consuming project's dependencies."
+    #error "ESPressio_Unit_Serializable.hpp requires ESPressio-Serializable. Add flowduino/ESPressio-Serializable@>=0.9.0,<1.0.0 to the consuming project's dependencies."
 #endif
 
 #include <tuple>

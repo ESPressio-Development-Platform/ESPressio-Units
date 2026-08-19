@@ -5,7 +5,7 @@ Flowduino ESPressio Development Platform.
 
 ## Latest Stable Version
 
-**0.2.0**
+**0.2.1**
 
 ## ESPressio Development Platform
 
@@ -52,6 +52,10 @@ Ordinary Unit types do **not** require Serializable. Serializable
 counterparts are exposed through separate `*_Serializable.hpp` headers
 and `ESPressio_SerializableUnits.hpp`; only applications selecting those
 types acquire the dependency.
+
+Serializable Unit variants target **ESPressio Serializable >= 0.9.0 < 1.0.0**,
+allowing compatible later 0.x minor and patch releases while preventing an
+automatic transition to a future 1.x breaking release.
 
 ## Namespace
 

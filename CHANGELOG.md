@@ -12,6 +12,18 @@ Versioning](https://semver.org/).
 > had little or no release-note detail, the entry is intentionally terse
 > rather than inferring unsupported intent.
 
+## \[0.2.1\] - 2026-08-19
+
+### Changed
+
+-   Updated the optional ESPressio Serializable compatibility guidance to
+    target `>= 0.9.0 < 1.0.0`.
+-   Replaced the narrower `^0.9.0` consumer guidance so Serializable Unit
+    variants may consume later compatible 0.x minor and patch releases while
+    remaining protected from a future 1.x breaking release.
+-   Updated current dependency documentation and release metadata for the
+    ESPressio dependency refresh.
+
 ## \[0.2.0\] - 2026-08-18
 
 ### Added

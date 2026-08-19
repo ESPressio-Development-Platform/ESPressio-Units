@@ -18,7 +18,7 @@ This distinction is important to the ESPressio architecture. Optional integratio
 
 ---
 
-## ESPressio Units 0.2.0
+## ESPressio Units 0.2.1
 
 **Required ESPressio dependencies: none.**
 
@@ -40,7 +40,7 @@ ordinary Unit type
 
 Serializable Unit type
     -> ESPressio Units
-    -> ESPressio Serializable
+    -> ESPressio Serializable >= 0.9.0 < 1.0.0
 ```
 
 ---
@@ -78,7 +78,7 @@ ESPressio Timing can operate with Serializable Unit time representations because
 
 ---
 
-## ESPressio Sockets 0.2.0
+## ESPressio Sockets 0.2.2
 
 **Required ESPressio dependencies: none.**
 
@@ -87,6 +87,8 @@ The core ESPressio Sockets library deliberately has no mandatory dependency on a
 It provides socket/network infrastructure and then exposes integrations through opt-in headers.
 
 ### ESPressio Sockets → ESPressio Event — opt-in
+
+Compatibility baseline: **ESPressio Event >= 5.6.2 < 6.0.0**.
 
 Socket Event Transport adapters implement the ESPressio Event transport abstraction.
 
@@ -97,6 +99,8 @@ A project using only the core socket facilities does not require ESPressio Event
 Because Event Transport operates on Serializable Events, the relevant Event/Serializable requirements are then inherited through that selected integration rather than imposed by the Sockets core.
 
 ### ESPressio Sockets → ESPressio Timing — opt-in
+
+Compatibility baseline: **ESPressio Timing >= 2.2.1 < 3.0.0**.
 
 Version 0.2.0 adds socket-based System Clock synchronization implementations.
 
@@ -114,12 +118,12 @@ ESPressio Timing continues to own clock discipline, synchronization calculations
 
 ---
 
-## ESPressio Timing 2.2.0
+## ESPressio Timing 2.2.1
 
 **Required ESPressio dependencies:**
 
-- ESPressio Units >= 0.2.0;
-- ESPressio Observable >= 3.0.0.
+- ESPressio Units >= 0.2.1 < 1.0.0;
+- ESPressio Observable >= 3.0.0 < 4.0.0.
 
 ### ESPressio Timing → ESPressio Units — required
 
@@ -139,12 +143,12 @@ The synchronous Observer layer also provides the source notifications consumed b
 
 ---
 
-## ESPressio Threads 3.1.0
+## ESPressio Threads 3.1.1
 
 **Required ESPressio dependencies:**
 
-- ESPressio Timing >= 2.0.0;
-- ESPressio Observable >= 3.0.0.
+- ESPressio Timing >= 2.2.1 < 3.0.0;
+- ESPressio Observable >= 3.0.0 < 4.0.0.
 
 ### ESPressio Threads → ESPressio Timing — required
 
@@ -164,11 +168,11 @@ ESPressio Event can optionally bridge them into asynchronous Events, but Threads
 
 ---
 
-## ESPressio ESP-Now 0.2.0
+## ESPressio ESP-Now 0.2.2
 
 **Required ESPressio dependencies:**
 
-- ESPressio Timing >= 2.1.0.
+- ESPressio Timing >= 2.2.1 < 3.0.0.
 
 ### ESPressio ESP-Now → ESPressio Timing — required
 
@@ -180,6 +184,8 @@ Timing remains responsible for the actual clock synchronization and discipline.
 
 ### ESPressio ESP-Now → ESPressio Event — opt-in
 
+Compatibility baseline: **ESPressio Event >= 5.6.2 < 6.0.0**.
+
 `ESPNowEventTransport` provides an ESP-NOW implementation of the ESPressio Event transport abstraction.
 
 The Event dependency is deliberately opt-in.
@@ -190,13 +196,13 @@ When `ESPNowEventTransport` is selected, the application also acquires the Seria
 
 ---
 
-## ESPressio Event 5.4.0
+## ESPressio Event 5.6.2
 
 **Required ESPressio dependencies:**
 
-- ESPressio Threads >= 3.1.0;
-- ESPressio Observable >= 3.0.0;
-- ESPressio Timing >= 2.2.0.
+- ESPressio Threads >= 3.1.1 < 4.0.0;
+- ESPressio Observable >= 3.0.0 < 4.0.0;
+- ESPressio Timing >= 2.2.1 < 3.0.0.
 
 Event currently sits at the deepest point in the core ESPressio dependency hierarchy represented here.
 
@@ -236,6 +242,8 @@ This prevents foundational/runtime libraries from acquiring an Event dependency 
 
 ### ESPressio Event → ESPressio Serializable — opt-in
 
+Compatibility baseline: **ESPressio Serializable >= 0.9.0 < 1.0.0**.
+
 Ordinary Event usage does not require ESPressio Serializable.
 
 Serializable Event support and Event Transport are explicitly opt-in.
@@ -253,7 +261,7 @@ while supporting:
 
 ```text
 Serializable / remotely transported Event
-    -> ESPressio Serializable
+    -> ESPressio Serializable >= 0.9.0 < 1.0.0
 ```
 
 ---
