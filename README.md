@@ -3,9 +3,13 @@
 Strongly typed SI unit and physical-quantity components for the
 Flowduino ESPressio Development Platform.
 
-## Latest Stable Version
+## Current Version
 
-**0.2.1**
+**0.2.2**
+
+Version 0.2.2 refreshes the optional Serializable Unit integration baseline to
+**ESPressio Serializable >= 0.10.1 < 1.0.0**. Ordinary Unit types remain
+independent of Serializable.
 
 ## ESPressio Development Platform
 
@@ -53,9 +57,9 @@ counterparts are exposed through separate `*_Serializable.hpp` headers
 and `ESPressio_SerializableUnits.hpp`; only applications selecting those
 types acquire the dependency.
 
-Serializable Unit variants target **ESPressio Serializable >= 0.10.0 < 1.0.0**,
-allowing compatible later 0.x minor and patch releases while preventing an
-automatic transition to a future 1.x breaking release.
+Serializable Unit variants target **ESPressio Serializable >= 0.10.1 < 1.0.0**,
+allowing compatible later 0.x patch releases while preventing an automatic
+transition to a future 1.x breaking release.
 
 ## PlatformIO
 
@@ -63,20 +67,20 @@ Core Units usage:
 
 ```ini
 lib_deps =
-    https://github.com/flowduino/ESPressio-Units@^0.2.1
+    https://github.com/flowduino/ESPressio-Units@^0.2.2
 ```
 
 When using the optional Serializable Unit variants:
 
 ```ini
 lib_deps =
-    https://github.com/flowduino/ESPressio-Units@^0.2.1
-    https://github.com/flowduino/ESPressio-Serializable@^0.10.0
+    https://github.com/flowduino/ESPressio-Units@^0.2.2
+    https://github.com/flowduino/ESPressio-Serializable@^0.10.1
 ```
 
 ## Namespace
 
-``` cpp
+```cpp
 ESPressio::Units
 ```
 
@@ -87,7 +91,7 @@ value with a compile-time canonical SI magnitude, a physical context,
 and an instance magnitude. It provides explicit checked conversions
 without virtual dispatch.
 
-``` cpp
+```cpp
 #include <ESPressio_Time.hpp>
 
 using namespace ESPressio::Units;
@@ -98,7 +102,7 @@ MicroSeconds<unsigned long> sample(250);
 ```
 
 `UnitOrderOfMagnitude` covers the SI prefix range from quecto through
-quetta, with `Base` representing 10\^0.
+quetta, with `Base` representing 10^0.
 
 ## Physical contexts
 
@@ -111,20 +115,20 @@ represented by the library.
 
 Include only what is required:
 
-``` cpp
+```cpp
 #include <ESPressio_Distance.hpp>
 #include <ESPressio_Time.hpp>
 ```
 
 or the full catalogue:
 
-``` cpp
+```cpp
 #include <ESPressio_Units.hpp>
 ```
 
 ## Magnitude conversion
 
-``` cpp
+```cpp
 Distance<double> distance(1250.0, Milli);
 double metres = distance.ToMagnitude(Base);
 ```
@@ -135,7 +139,7 @@ safety.
 
 ## Strongly typed formulas
 
-``` cpp
+```cpp
 Distance<double> distance(100.0, Base);
 MilliSeconds<unsigned long> elapsed(500);
 
@@ -152,16 +156,15 @@ for Arduino output.
 
 ## Serializable Unit variants
 
-Version 0.2.0 preserves ordinary types while adding opt-in Serializable
-siblings:
+Serializable counterparts remain opt-in:
 
-``` text
+```text
 ordinary Unit
     -> Units only
 
 Serializable Unit
     -> Units
-    -> Serializable
+    -> Serializable >= 0.10.1 < 1.0.0
 ```
 
 This is particularly important to Timing: Timing can use either ordinary
@@ -182,7 +185,7 @@ or Serializable time types without making Serializable mandatory.
 The repository's host tests and generated conversion catalogue remain
 the authoritative exhaustive reference:
 
-``` text
+```text
 docs/UNIT_CONVERSIONS.md
 tools/generate_conversion_assets.py
 ```
