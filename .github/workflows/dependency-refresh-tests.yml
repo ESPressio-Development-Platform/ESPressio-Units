@@ -57,10 +57,10 @@ jobs:
           #include <ESPressio_Units.hpp>
           #include <ESPressio_SerializableUnits.hpp>
 
-          using SerializableTime = ESPressio::Units::SerializableMilliSeconds<unsigned long>;
+          using SerializableInterval = ESPressio::Units::SerializableMilliSeconds<unsigned long>;
 
           void setup() {
-              SerializableTime interval(500);
+              SerializableInterval interval(500);
               (void)interval;
           }
 
