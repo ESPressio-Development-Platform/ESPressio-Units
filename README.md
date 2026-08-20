@@ -53,9 +53,26 @@ counterparts are exposed through separate `*_Serializable.hpp` headers
 and `ESPressio_SerializableUnits.hpp`; only applications selecting those
 types acquire the dependency.
 
-Serializable Unit variants target **ESPressio Serializable >= 0.9.0 < 1.0.0**,
+Serializable Unit variants target **ESPressio Serializable >= 0.10.0 < 1.0.0**,
 allowing compatible later 0.x minor and patch releases while preventing an
 automatic transition to a future 1.x breaking release.
+
+## PlatformIO
+
+Core Units usage:
+
+```ini
+lib_deps =
+    https://github.com/flowduino/ESPressio-Units@^0.2.1
+```
+
+When using the optional Serializable Unit variants:
+
+```ini
+lib_deps =
+    https://github.com/flowduino/ESPressio-Units@^0.2.1
+    https://github.com/flowduino/ESPressio-Serializable@^0.10.0
+```
 
 ## Namespace
 
