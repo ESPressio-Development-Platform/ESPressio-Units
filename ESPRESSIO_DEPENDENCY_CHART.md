@@ -5,14 +5,14 @@
 ## Purpose
 
 This document describes the current ESPressio dependency hierarchy relevant to
-ESPressio Units 0.2.2.
+ESPressio Units 0.2.3.
 
 - **Solid arrow** — required dependency.
 - **Dashed arrow** — opt-in dependency activated only when the associated
   integration/header is selected.
 - Arrows point from the dependent library to the library it consumes.
 
-## ESPressio Units 0.2.2
+## ESPressio Units 0.2.3
 
 **Required ESPressio dependencies: none.**
 
@@ -20,8 +20,8 @@ Ordinary Unit types remain standalone. Serializable variants are explicitly
 opt-in:
 
 ```text
-ESPressio Units 0.2.2
-    - - -> ESPressio Serializable >= 0.10.1 < 1.0.0
+ESPressio Units 0.2.3
+    - - -> ESPressio Serializable >= 0.10.2 < 1.0.0
             Serializable Unit variants only
 ```
 
@@ -30,8 +30,8 @@ ESPressio Units 0.2.2
 ```text
 FOUNDATIONAL
 ├── Observable 3.0.1
-├── Serializable 0.10.1
-├── Units 0.2.2
+├── Serializable 0.10.2
+├── Units 0.2.3
 ├── Security 0.2.0
 └── Command 0.3.0
 
@@ -51,14 +51,14 @@ TRANSPORT / INTEGRATION
 └── Event 5.8.1
 
 DIAGNOSTICS / OPERATOR
-└── Serial 0.5.1
+└── Serial 0.5.1 (release candidate)
 ```
 
 ### Important opt-in relationships
 
 ```text
 Units
-  - - -> Serializable >= 0.10.1 < 1.0.0
+  - - -> Serializable >= 0.10.2 < 1.0.0
          Serializable Unit variants
 
 Sockets
@@ -101,7 +101,7 @@ The intended ESPressio rule is that integration dependencies cascade only
 upstream library, but an upstream library should not acquire a reverse
 dependency merely to host an integration.
 
-There is one currently known reciprocal optional relationship:
+There are two currently known reciprocal optional relationships:
 
 ```text
 ESP-Now - - -> Event
@@ -111,11 +111,23 @@ Event - - -> ESP-Now
     ESPNowTransportEventBridge
 ```
 
-Although both edges are opt-in, together they form an architectural cycle. The
+and:
+
+```text
+Sockets - - -> Event
+    socket Event transports
+
+Event - - -> Sockets
+    SocketWorkerEventBridge
+    SocketSecuritySessionEventBridge
+```
+
+Although these edges are opt-in, each pair forms an architectural cycle. The
 preferred resolution is to keep Event transport-neutral and move the
-ESP-Now-specific Observer-to-Event bridge downstream into ESP-Now's Event
-integration (or a dedicated downstream integration package). No new reciprocal
-dependency should be introduced while that relocation remains outstanding.
+transport-specific Observer-to-Event bridges downstream alongside the concrete
+transport library's Event integration (or into a dedicated downstream
+integration package). No new reciprocal dependency should be introduced while
+those relocations remain outstanding.
 
 ## Architectural principle
 
