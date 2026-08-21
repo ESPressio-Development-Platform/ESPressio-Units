@@ -3,7 +3,7 @@ name: Dependency Refresh Tests
 on:
   push:
     branches:
-      - feature/4-serializable-0.10.2-dependency-refresh
+      - main
   pull_request:
     branches:
       - main
