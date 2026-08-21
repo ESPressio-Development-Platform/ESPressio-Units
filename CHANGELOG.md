@@ -12,6 +12,26 @@ Versioning](https://semver.org/).
 > had little or no release-note detail, the entry is intentionally terse
 > rather than inferring unsupported intent.
 
+## [0.2.3] - 2026-08-21
+
+### Changed
+
+- Updated the optional ESPressio Serializable integration baseline from
+  `>= 0.10.1 < 1.0.0` to `>= 0.10.2 < 1.0.0`.
+- Updated PlatformIO examples and current dependency documentation to target
+  ESPressio Serializable 0.10.2.
+- Updated release-candidate CI to compile Serializable Unit variants against
+  the released ESPressio Serializable 0.10.2 tag.
+- Updated package metadata for ESPressio Units 0.2.3.
+
+### Compatibility
+
+- Ordinary Unit types remain dependency-free with respect to ESPressio
+  Serializable.
+- Serializable Unit variants remain opt-in and source-compatible.
+- No Units runtime or public API behaviour changes are introduced by this
+  dependency-maintenance release.
+
 ## [0.2.2] - 2026-08-20
 
 ### Changed
