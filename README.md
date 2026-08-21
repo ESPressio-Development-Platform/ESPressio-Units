@@ -5,10 +5,10 @@ Flowduino ESPressio Development Platform.
 
 ## Current Version
 
-**0.2.2**
+**0.2.3**
 
-Version 0.2.2 refreshes the optional Serializable Unit integration baseline to
-**ESPressio Serializable >= 0.10.1 < 1.0.0**. Ordinary Unit types remain
+Version 0.2.3 refreshes the optional Serializable Unit integration baseline to
+**ESPressio Serializable >= 0.10.2 < 1.0.0**. Ordinary Unit types remain
 independent of Serializable.
 
 ## ESPressio Development Platform
@@ -57,7 +57,7 @@ counterparts are exposed through separate `*_Serializable.hpp` headers
 and `ESPressio_SerializableUnits.hpp`; only applications selecting those
 types acquire the dependency.
 
-Serializable Unit variants target **ESPressio Serializable >= 0.10.1 < 1.0.0**,
+Serializable Unit variants target **ESPressio Serializable >= 0.10.2 < 1.0.0**,
 allowing compatible later 0.x patch releases while preventing an automatic
 transition to a future 1.x breaking release.
 
@@ -67,15 +67,15 @@ Core Units usage:
 
 ```ini
 lib_deps =
-    https://github.com/flowduino/ESPressio-Units@^0.2.2
+    https://github.com/flowduino/ESPressio-Units@^0.2.3
 ```
 
 When using the optional Serializable Unit variants:
 
 ```ini
 lib_deps =
-    https://github.com/flowduino/ESPressio-Units@^0.2.2
-    https://github.com/flowduino/ESPressio-Serializable@^0.10.1
+    https://github.com/flowduino/ESPressio-Units@^0.2.3
+    https://github.com/flowduino/ESPressio-Serializable@^0.10.2
 ```
 
 ## Namespace
@@ -164,7 +164,7 @@ ordinary Unit
 
 Serializable Unit
     -> Units
-    -> Serializable >= 0.10.1 < 1.0.0
+    -> Serializable >= 0.10.2 < 1.0.0
 ```
 
 This is particularly important to Timing: Timing can use either ordinary
