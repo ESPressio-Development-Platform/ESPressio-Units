@@ -36,22 +36,22 @@ FOUNDATIONAL
 └── Command 0.3.0
 
 RUNTIME
-└── Timing 2.2.3
-    ├── Units >= 0.2.2 < 1.0.0
+└── Timing 2.2.4
+    ├── Units >= 0.2.3 < 1.0.0
     └── Observable >= 3.0.1 < 4.0.0
 
 EXECUTION
-└── Threads 3.1.3
-    ├── Timing >= 2.2.3 < 3.0.0
+└── Threads 3.1.4
+    ├── Timing >= 2.2.4 < 3.0.0
     └── Observable >= 3.0.1 < 4.0.0
 
 TRANSPORT / INTEGRATION
 ├── Sockets 0.5.0
-├── ESP-Now 0.5.1
-└── Event 5.8.1
+├── ESP-Now 0.5.2
+└── Event 5.8.2
 
 DIAGNOSTICS / OPERATOR
-└── Serial 0.5.1 (release candidate)
+└── Serial 0.5.1
 ```
 
 ### Important opt-in relationships
@@ -70,7 +70,7 @@ Sockets
          selected integrations only
 
 ESP-Now
-  -> Timing >= 2.2.3 < 3.0.0
+  -> Timing >= 2.2.4 < 3.0.0
   -> Observable >= 3.0.1 < 4.0.0
   - - -> Event
          ESP-NOW Event transport
@@ -78,10 +78,10 @@ ESP-Now
          selected integrations only
 
 Event
-  -> Threads >= 3.1.3 < 4.0.0
-  -> Timing >= 2.2.3 < 3.0.0
+  -> Threads >= 3.1.4 < 4.0.0
+  -> Timing >= 2.2.4 < 3.0.0
   -> Observable >= 3.0.1 < 4.0.0
-  - - -> Serializable >= 0.10.1 < 1.0.0
+  - - -> Serializable >= 0.10.2 < 1.0.0
          Serializable Events / Event Transport
   - - -> Security / Command / Sockets
          Observer-to-Event bridges
