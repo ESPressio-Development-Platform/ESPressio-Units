@@ -1,6 +1,6 @@
 # ESPressio Units
 
-Strongly typed SI unit and physical-quantity components for the Flowduino ESPressio Development Platform.
+Strongly typed SI unit and physical-quantity components for the ESPressio Development Platform.
 
 ESPressio Units makes physical meaning part of the C++ type system so APIs can distinguish seconds from milliseconds, distance from energy, and other otherwise-identical numeric values at compile time.
 
@@ -35,6 +35,8 @@ Template instantiation, formatted conversion and floating-point use can still be
 # ESPressio Development Platform
 
 ESPressio libraries are designed to be light-weight, easy to use, object-oriented and explicit about SOLID dependency boundaries.
+
+Project website: [espressio.org](https://espressio.org).
 
 ## License
 
@@ -77,15 +79,15 @@ Core Units:
 
 ```ini
 lib_deps =
-    flowduino/ESPressio-Units@^0.2.3
+    espressio-development-platform/ESPressio-Units@^0.2.3
 ```
 
 With optional Serializable Unit types:
 
 ```ini
 lib_deps =
-    flowduino/ESPressio-Units@^0.2.3
-    flowduino/ESPressio-Serializable@^0.10.2
+    espressio-development-platform/ESPressio-Units@^0.2.3
+    espressio-development-platform/ESPressio-Serializable@^0.10.2
 ```
 
 # `UnitOrderOfMagnitude`
