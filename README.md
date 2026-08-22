@@ -4,9 +4,9 @@ Strongly typed SI unit and physical-quantity components for the ESPressio Develo
 
 ESPressio Units makes physical meaning part of the C++ type system so APIs can distinguish seconds from milliseconds, distance from energy, and other otherwise-identical numeric values at compile time.
 
-## Current Version — 0.2.3
+## Current Version — 0.2.4
 
-Version 0.2.3 retains the comprehensive Units 0.2 API and validates optional Serializable Unit variants against ESPressio Serializable 0.10.2. Ordinary Unit types remain independent of Serializable.
+Version 0.2.4 retains the comprehensive Units 0.2 API and validates optional Serializable Unit variants against the migrated ESPressio Serializable 0.10.3 baseline. Ordinary Unit types remain independent of Serializable.
 
 # Why strongly typed Units?
 
@@ -66,7 +66,7 @@ Required ESPressio dependencies: **none**.
 Optional Serializable Unit variants:
 
 ```text
-ESPressio Serializable >= 0.10.2 < 1.0.0
+ESPressio Serializable >= 0.10.3 < 1.0.0
 ```
 
 Ordinary Unit headers do not acquire Serializable. Serializable counterparts are exposed through separate `*_Serializable.hpp` headers and `ESPressio_SerializableUnits.hpp`.
@@ -79,15 +79,15 @@ Core Units:
 
 ```ini
 lib_deps =
-    espressio-development-platform/ESPressio-Units@^0.2.3
+    espressio-development-platform/ESPressio-Units@^0.2.4
 ```
 
 With optional Serializable Unit types:
 
 ```ini
 lib_deps =
-    espressio-development-platform/ESPressio-Units@^0.2.3
-    espressio-development-platform/ESPressio-Serializable@^0.10.2
+    espressio-development-platform/ESPressio-Units@^0.2.4
+    espressio-development-platform/ESPressio-Serializable@^0.10.3
 ```
 
 # `UnitOrderOfMagnitude`
