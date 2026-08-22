@@ -3,9 +3,9 @@
     "description": "Strongly-typed SI unit and physical quantity library intended for use with microcontrollers",
     "keywords": "unit,units,si,quantity,measurement,magnitude,time,distance,mass,conversion,type-safe,espressio",
     "authors": {
-        "name": "Flowduino",
+        "name": "Simon J. Stuart",
         "maintainer": true,
-        "url": "https://flowduino.com"
+        "url": "https://espressio.org"
     },
     "build": {
         "flags": [
@@ -15,7 +15,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/Flowduino/ESPressio-Units.git"
+        "url": "https://github.com/ESPressio-Development-Platform/ESPressio-Units.git"
     },
     "version": "0.2.3",
     "license": "Apache-2.0",
