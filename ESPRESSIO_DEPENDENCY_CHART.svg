@@ -23,14 +23,22 @@
   <rect class="node" x="310" y="355" width="190" height="68" rx="8"/><text class="label" x="405" y="386">Security 0.4.0</text><text class="small" x="405" y="405">optional Event integration</text>
   <rect class="node" x="550" y="355" width="205" height="68" rx="8"/><text class="label" x="652" y="386">Event 6.0.1</text><text class="small" x="652" y="405">optional Serializable</text>
   <rect class="node" x="805" y="355" width="205" height="68" rx="8"/><text class="label" x="907" y="386">Persistence 0.3.0</text><text class="small" x="907" y="405">core dependency-free</text>
+  <path class="edge" d="M140 355 L155 153"/><path class="edge optional" d="M250 380 L550 390"/>
+  <path class="edge" d="M385 355 L185 153"/><path class="edge optional" d="M500 390 L550 390"/>
+  <path class="edge" d="M620 355 L700 283"/><path class="edge" d="M600 355 L430 283"/><path class="edge" d="M570 355 L220 153"/><path class="edge optional" d="M590 355 L430 153"/>
+  <path class="edge optional" d="M860 355 L450 153"/><path class="edge optional" d="M900 355 L485 405"/>
 
   <text class="section" x="35" y="485">Transport / connectivity</text>
   <rect class="node" x="100" y="510" width="220" height="72" rx="8"/><text class="label" x="210" y="540">Sockets 0.7.1</text><text class="small" x="210" y="560">required: Observable</text>
   <rect class="node" x="405" y="510" width="220" height="72" rx="8"/><text class="label" x="515" y="540">ESP-Now 0.8.1</text><text class="small" x="515" y="560">required: Timing, Observable</text>
   <rect class="node" x="710" y="510" width="230" height="72" rx="8"/><text class="label" x="825" y="540">WiFi 0.1.0</text><text class="small" x="825" y="560">required: Observable, Serializable</text>
+  <path class="edge" d="M160 510 L165 153"/><path class="edge optional" d="M230 510 L600 423"/><path class="edge optional" d="M180 510 L210 423"/><path class="edge optional" d="M255 510 L405 423"/><path class="edge optional" d="M200 510 L380 283"/>
+  <path class="edge" d="M485 510 L420 283"/><path class="edge" d="M445 510 L190 153"/><path class="edge optional" d="M520 510 L675 423"/><path class="edge optional" d="M540 510 L245 423"/><path class="edge optional" d="M570 510 L450 423"/>
+  <path class="edge" d="M760 510 L210 153"/><path class="edge" d="M815 510 L455 153"/><path class="edge optional" d="M850 510 L895 423"/><path class="edge optional" d="M800 510 L690 423"/><path class="edge optional" d="M750 510 L240 423"/><path class="edge optional" d="M780 510 L455 423"/>
 
   <text class="section" x="35" y="650">Terminal operator / diagnostics</text>
   <rect class="node" x="435" y="675" width="360" height="92" rx="8"/><text class="label" x="615" y="705">Serial 0.8.0</text><text class="small" x="615" y="728">core: no ESPressio dependencies</text><text class="small" x="615" y="748">all subsystem integrations are opt-in</text>
+  <path class="edge optional" d="M500 675 L210 582"/><path class="edge optional" d="M570 675 L515 582"/><path class="edge optional" d="M650 675 L825 582"/><path class="edge optional" d="M610 675 L650 423"/><path class="edge optional" d="M530 675 L395 283"/>
 
   <text class="section" x="35" y="830">Active release cascade</text>
   <text class="note" x="55" y="860">Serializable 0.11.2 → Units 0.2.6 → Timing 2.2.7 → Threads 3.1.6 → Event 6.0.2 → Command 1.0.2 / Security 0.4.1</text>
