@@ -29,7 +29,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: ESPressio-Development-Platform/ESPressio-Serializable
-          ref: 0.10.3
+          ref: 0.11.1
           path: project/dependencies/ESPressio-Serializable
       - uses: actions/setup-python@v5
         with:
@@ -54,14 +54,24 @@ jobs:
           EOF
           cat > project/compile/src/main.cpp <<'EOF'
           #include <Arduino.h>
+          #include <vector>
           #include <ESPressio_Units.hpp>
           #include <ESPressio_SerializableUnits.hpp>
 
           using SerializableInterval = ESPressio::Units::SerializableMilliSeconds<unsigned long>;
 
+          struct SerializableSchedule {
+              SerializableInterval Interval{500};
+          };
+
           void setup() {
               SerializableInterval interval(500);
-              (void)interval;
+              SerializableSchedule schedule;
+              std::vector<SerializableInterval> intervals;
+              intervals.emplace_back(250);
+              intervals.push_back(interval);
+              (void)schedule;
+              (void)intervals;
           }
 
           void loop() {}
