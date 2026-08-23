@@ -4,16 +4,16 @@
   </style>
   <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#333"/></marker></defs>
 
-  <text class="title" x="35" y="42">ESPressio Dependency Architecture — Units 0.2.5 Cascade Step</text>
+  <text class="title" x="35" y="42">ESPressio Dependency Architecture — Units 0.2.6 Cascade Step</text>
 
   <text class="section" x="35" y="78">Foundation</text>
   <rect class="node" x="55" y="95" width="190" height="58" rx="8"/><text class="label" x="150" y="128">Observable 3.0.2</text>
-  <rect class="node" x="300" y="95" width="205" height="58" rx="8"/><text class="label" x="402" y="128">Serializable 0.11.1</text>
-  <rect class="node" x="560" y="95" width="180" height="58" rx="8"/><text class="label" x="650" y="128">Units 0.2.5</text>
+  <rect class="node" x="300" y="95" width="205" height="58" rx="8"/><text class="label" x="402" y="128">Serializable 0.11.2</text>
+  <rect class="node" x="560" y="95" width="180" height="58" rx="8"/><text class="label" x="650" y="128">Units 0.2.6</text>
   <path class="edge optional" d="M610 153 L455 153"/>
 
   <text class="section" x="35" y="205">Runtime / execution</text>
-  <rect class="node" x="300" y="225" width="190" height="58" rx="8"/><text class="label" x="395" y="258">Timing 2.2.5</text>
+  <rect class="node" x="300" y="225" width="190" height="58" rx="8"/><text class="label" x="395" y="258">Timing 2.2.6</text>
   <rect class="node" x="590" y="225" width="190" height="58" rx="8"/><text class="label" x="685" y="258">Threads 3.1.5</text>
   <path class="edge" d="M420 225 L620 153"/><path class="edge" d="M340 225 L190 153"/>
   <path class="edge" d="M630 225 L470 270"/><path class="edge" d="M610 225 L220 153"/>
@@ -41,9 +41,9 @@
   <path class="edge optional" d="M500 675 L210 582"/><path class="edge optional" d="M570 675 L515 582"/><path class="edge optional" d="M650 675 L825 582"/><path class="edge optional" d="M610 675 L650 423"/><path class="edge optional" d="M530 675 L395 283"/>
 
   <text class="section" x="35" y="830">Active release cascade</text>
-  <text class="note" x="55" y="860">Serializable 0.11.1 → Units 0.2.5 → Timing 2.2.6 → Threads 3.1.6 → Event 6.0.2 → Command 1.0.2 / Security 0.4.1</text>
+  <text class="note" x="55" y="860">Serializable 0.11.2 → Units 0.2.6 → Timing 2.2.7 → Threads 3.1.6 → Event 6.0.2 → Command 1.0.2 / Security 0.4.1</text>
   <text class="note" x="55" y="886">→ Persistence 0.3.1 / Sockets 0.7.2 / ESP-Now 0.8.2 → WiFi 0.2.0 → Serial 0.8.1</text>
   <text class="note" x="55" y="920">Solid arrows: required dependencies. Dashed arrows: opt-in integrations. See ESPRESSIO_DEPENDENCY_CHART.md for the exhaustive edge list.</text>
-  <text class="note" x="55" y="946">Future-version labels in the cascade are planned release steps; each becomes current only after its upstream releases are published.</text>
+  <text class="note" x="55" y="946">Units 0.2.5 and Timing 2.2.6 were released during the superseded 0.11.1 train; corrected replacements are 0.2.6 and 2.2.7.</text>
   <text class="note" x="55" y="972">Event has no reverse dependency on Command, Security, Sockets, ESP-Now or WiFi. Serial remains terminal/downstream. Tree remains standalone.</text>
 </svg>
