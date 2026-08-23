@@ -4,9 +4,9 @@ Strongly typed SI unit and physical-quantity components for the ESPressio Develo
 
 ESPressio Units makes physical meaning part of the C++ type system so APIs can distinguish seconds from milliseconds, distance from energy, and other otherwise-identical numeric values at compile time.
 
-## Current Version — 0.2.5
+## Current Version — 0.2.6
 
-Version 0.2.5 retains the comprehensive Units 0.2 API and validates optional Serializable Unit variants against ESPressio Serializable 0.11.1. Serializable 0.11.1 restores ordinary value-type composition and container use for Serializable-derived types, which is directly relevant to Serializable Unit wrappers. Ordinary Unit types remain independent of Serializable.
+Version 0.2.6 retains the comprehensive Units 0.2 API and validates optional Serializable Unit variants against ESPressio Serializable 0.11.2. Serializable 0.11.2 is the corrected package baseline for the public-destructor/value-composition fix introduced in 0.11.1; ordinary Unit types remain independent of Serializable.
 
 # Why strongly typed Units?
 
@@ -66,7 +66,7 @@ Required ESPressio dependencies: **none**.
 Optional Serializable Unit variants:
 
 ```text
-ESPressio Serializable >= 0.11.1 < 1.0.0
+ESPressio Serializable >= 0.11.2 < 1.0.0
 ```
 
 Ordinary Unit headers do not acquire Serializable. Serializable counterparts are exposed through separate `*_Serializable.hpp` headers and `ESPressio_SerializableUnits.hpp`.
@@ -79,15 +79,15 @@ Core Units:
 
 ```ini
 lib_deps =
-    espressio-development-platform/ESPressio-Units@^0.2.5
+    espressio-development-platform/ESPressio-Units@^0.2.6
 ```
 
 With optional Serializable Unit types:
 
 ```ini
 lib_deps =
-    espressio-development-platform/ESPressio-Units@^0.2.5
-    espressio-development-platform/ESPressio-Serializable@^0.11.1
+    espressio-development-platform/ESPressio-Units@^0.2.6
+    espressio-development-platform/ESPressio-Serializable@^0.11.2
 ```
 
 # `UnitOrderOfMagnitude`
@@ -345,7 +345,7 @@ ordinary Unit
 
 Serializable Unit
     -> Units
-    - - -> Serializable >= 0.11.1 < 1.0.0
+    - - -> Serializable >= 0.11.2 < 1.0.0
 ```
 
 This is particularly useful for ESPressio Timing: Timing can use ordinary time values without requiring Serializable, while an application that needs serialized timestamps can explicitly select a Serializable time type.
@@ -376,7 +376,7 @@ docs/UNIT_CONVERSIONS.md
 tools/generate_conversion_assets.py
 ```
 
-The ESP32 dependency-refresh consumer additionally compiles Serializable Unit values as ordinary aggregate members and `std::vector` elements against Serializable 0.11.1, protecting the value-composition/container use case that motivated the upstream patch.
+The ESP32 dependency-refresh consumer additionally compiles Serializable Unit values as ordinary aggregate members and `std::vector` elements against Serializable 0.11.2, protecting the value-composition/container use case that motivated the upstream patch.
 
 # Changelog
 
