@@ -12,6 +12,35 @@ Versioning](https://semver.org/).
 > had little or no release-note detail, the entry is intentionally terse
 > rather than inferring unsupported intent.
 
+## [0.2.7] - 2026-08-24
+
+### Changed
+
+- Updated the optional ESPressio Serializable integration baseline from
+  `>= 0.11.2 < 1.0.0` to `>= 0.11.3 < 1.0.0`.
+- Updated package metadata and installation guidance for ESPressio Units 0.2.7.
+- Updated release-candidate CI to compile the Serializable Unit catalogue
+  against ESPressio Serializable 0.11.3.
+- Retained aggregate-member and `std::vector` consumer compile coverage for
+  Serializable Unit values, directly exercising the value-composition fix
+  delivered by Serializable 0.11.3.
+- Refreshed current ESPressio dependency documentation for the Serializable
+  0.11.3 cascade.
+
+### Compatibility
+
+- Ordinary Unit types remain dependency-free with respect to ESPressio
+  Serializable.
+- Serializable Unit variants remain opt-in and source-compatible.
+- No Unit conversion, formula, formatting, representation or runtime semantics
+  are changed by this dependency-maintenance release.
+
+### Cascade
+
+- This is the first downstream release after ESPressio Serializable 0.11.3.
+- ESPressio Timing should consume Units 0.2.7 as the next release in the
+  coordinated dependency cascade.
+
 ## [0.2.6] - 2026-08-23
 
 ### Changed
