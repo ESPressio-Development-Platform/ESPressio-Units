@@ -16,13 +16,11 @@ namespace ESPressio {
 
     namespace Units {
 
-        /*
-            `Unit` pairs a numeric value with its SI order of magnitude.
-
-            Specialised unit types can inherit from this type to retain a
-            common value and magnitude representation without introducing
-            virtual dispatch or dynamic allocation.
-        */
+        /// <summary>Pairs an arithmetic value with an SI order of magnitude and physical-quantity context.</summary>
+        /// <typeparam name="TValue">Non-boolean arithmetic type used to store the unit value.</typeparam>
+        /// <typeparam name="TBaseOrderOfMagnitude">Default SI magnitude used when no explicit magnitude is supplied.</typeparam>
+        /// <typeparam name="TContext">Physical quantity represented by the unit.</typeparam>
+        /// <remarks>Specialized unit types inherit this abstraction to share value, magnitude, formatting, and conversion behavior without virtual dispatch or dynamic allocation.</remarks>
         template <
             typename TValue,
             UnitOrderOfMagnitude TBaseOrderOfMagnitude = Base,
@@ -39,27 +37,35 @@ namespace ESPressio {
                 "non-boolean arithmetic value type"
             );
 
+            /// <summary>Stored numeric value expressed at <c>orderOfMagnitude</c>.</summary>
             TValue value;
+            /// <summary>SI order of magnitude associated with the stored value.</summary>
             UnitOrderOfMagnitude orderOfMagnitude;
 
+            /// <summary>Default SI order of magnitude for this unit specialization.</summary>
             static constexpr UnitOrderOfMagnitude baseOrderOfMagnitude =
                 TBaseOrderOfMagnitude;
+            /// <summary>Physical quantity represented by this unit specialization.</summary>
             static constexpr UnitContext context = TContext;
 
+            /// <summary>Creates a zero-initialized unit at its base order of magnitude.</summary>
             Unit()
                 : value(),
                   orderOfMagnitude(TBaseOrderOfMagnitude) { }
 
+            /// <summary>Creates a unit from a value and optional SI order of magnitude.</summary>
             explicit Unit(
                 TValue value,
                 UnitOrderOfMagnitude orderOfMagnitude =
                     TBaseOrderOfMagnitude
             ) : value(value), orderOfMagnitude(orderOfMagnitude) { }
 
+            /// <summary>Replaces the numeric value while preserving the current order of magnitude.</summary>
             void SetValue(TValue value) {
                 this->value = value;
             }
 
+            /// <summary>Replaces both the numeric value and its SI order of magnitude.</summary>
             void SetValue(
                 TValue value,
                 UnitOrderOfMagnitude orderOfMagnitude
@@ -68,6 +74,8 @@ namespace ESPressio {
                 this->orderOfMagnitude = orderOfMagnitude;
             }
 
+            /// <summary>Formats the value together with its SI magnitude prefix and unit context.</summary>
+            /// <param name="representation">Whether unit metadata is rendered as symbols or full names.</param>
             String AsString(
                 UnitRepresentation representation =
                     UnitRepresentation::Symbol
@@ -89,12 +97,15 @@ namespace ESPressio {
                 return result;
             }
 
+            /// <summary>Converts this value to another SI order of magnitude as <c>double</c>.</summary>
+            /// <remarks>Performs range validation and throws <c>std::overflow_error</c> when the converted value cannot be represented.</remarks>
             double ToMagnitude(
                 UnitOrderOfMagnitude targetOrderOfMagnitude
             ) const {
                 return ToMagnitude<double>(targetOrderOfMagnitude);
             }
 
+            /// <summary>Converts this value to another SI order of magnitude as <c>double</c> without range validation.</summary>
             double ToMagnitudeUnchecked(
                 UnitOrderOfMagnitude targetOrderOfMagnitude
             ) const {
@@ -103,6 +114,8 @@ namespace ESPressio {
                 );
             }
 
+            /// <summary>Finds the engineering SI magnitude that gives the nearest practical whole-number representation.</summary>
+            /// <returns>The selected engineering order of magnitude.</returns>
             UnitOrderOfMagnitude GetNearestWholeMagnitude() const {
                 if (value == static_cast<TValue>(0)) {
                     return orderOfMagnitude;
@@ -165,6 +178,8 @@ namespace ESPressio {
                 return Quecto;
             }
 
+            /// <summary>Returns an equivalent unit expressed at its nearest practical engineering magnitude.</summary>
+            /// <typeparam name="TResult">Arithmetic type used to store the converted value.</typeparam>
             template <typename TResult = double>
             Unit<
                 TResult,
@@ -184,6 +199,8 @@ namespace ESPressio {
                 );
             }
 
+            /// <summary>Converts this value to another SI magnitude using a checked floating-point result type.</summary>
+            /// <typeparam name="TResult">Floating-point destination type.</typeparam>
             template <typename TResult>
             typename std::enable_if<
                 std::is_floating_point<TResult>::value,
@@ -213,6 +230,8 @@ namespace ESPressio {
                 return static_cast<TResult>(convertedValue);
             }
 
+            /// <summary>Converts this value to another SI magnitude without checked result-range enforcement.</summary>
+            /// <typeparam name="TResult">Non-boolean arithmetic destination type.</typeparam>
             template <typename TResult>
             typename std::enable_if<
                 std::is_arithmetic<TResult>::value &&
@@ -229,6 +248,9 @@ namespace ESPressio {
                 );
             }
 
+            /// <summary>Converts this unit to a directly compatible physical context.</summary>
+            /// <typeparam name="TTarget">Target unit template.</typeparam>
+            /// <typeparam name="TResult">Arithmetic type used by the target unit.</typeparam>
             template <
                 template <typename> class TTarget,
                 typename TResult = double
@@ -250,6 +272,9 @@ namespace ESPressio {
                 );
             }
 
+            /// <summary>Converts this value to another SI magnitude using a checked integral result type.</summary>
+            /// <typeparam name="TResult">Non-boolean integral destination type.</typeparam>
+            /// <remarks>The converted value is rounded before range validation and conversion.</remarks>
             template <typename TResult>
             typename std::enable_if<
                 std::is_integral<TResult>::value &&
