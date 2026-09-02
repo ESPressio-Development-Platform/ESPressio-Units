@@ -6,7 +6,7 @@ ESPressio Units makes physical meaning part of the C++ type system so APIs can d
 
 ## Current Version — 0.2.7
 
-Version 0.2.7 retains the comprehensive Units 0.2 API and validates optional Serializable Unit variants against ESPressio Serializable 0.11.3. Serializable 0.11.3 contains the ESP32 value-composition construction fix required for Serializable-derived values used as aggregate members and standard-container elements; ordinary Unit types remain independent of Serializable.
+Version 0.2.7 retains the comprehensive Units 0.2 API and validates optional Serializable Unit variants against ESPressio Serializable `main`. Ordinary Unit types remain independent of Serializable.
 
 # Why strongly typed Units?
 
@@ -66,7 +66,7 @@ Required ESPressio dependencies: **none**.
 Optional Serializable Unit variants:
 
 ```text
-ESPressio Serializable >= 0.11.3 < 1.0.0
+ESPressio Serializable main
 ```
 
 Ordinary Unit headers do not acquire Serializable. Serializable counterparts are exposed through separate `*_Serializable.hpp` headers and `ESPressio_SerializableUnits.hpp`.
@@ -79,15 +79,15 @@ Core Units:
 
 ```ini
 lib_deps =
-    espressio-development-platform/ESPressio-Units@^0.2.7
+    https://github.com/ESPressio-Development-Platform/ESPressio-Units.git#main
 ```
 
 With optional Serializable Unit types:
 
 ```ini
 lib_deps =
-    espressio-development-platform/ESPressio-Units@^0.2.7
-    espressio-development-platform/ESPressio-Serializable@^0.11.3
+    https://github.com/ESPressio-Development-Platform/ESPressio-Units.git#main
+    https://github.com/ESPressio-Development-Platform/ESPressio-Serializable.git#main
 ```
 
 # `UnitOrderOfMagnitude`
@@ -345,7 +345,7 @@ ordinary Unit
 
 Serializable Unit
     -> Units
-    - - -> Serializable >= 0.11.3 < 1.0.0
+    - - -> Serializable main
 ```
 
 This is particularly useful for ESPressio Timing: Timing can use ordinary time values without requiring Serializable, while an application that needs serialized timestamps can explicitly select a Serializable time type.
@@ -376,7 +376,7 @@ docs/UNIT_CONVERSIONS.md
 tools/generate_conversion_assets.py
 ```
 
-The ESP32 dependency-refresh consumer additionally compiles Serializable Unit values as ordinary aggregate members and `std::vector` elements against Serializable 0.11.3, protecting the value-composition/container use case fixed by the upstream patch.
+The ESP32 dependency-refresh consumer additionally compiles Serializable Unit values as ordinary aggregate members and `std::vector` elements against Serializable `main`, protecting the value-composition/container use case fixed by the upstream patch.
 
 # Changelog
 
