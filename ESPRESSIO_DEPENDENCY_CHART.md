@@ -38,38 +38,38 @@ Units 0.2.7
     -> none
 
 Timing 2.2.8
-    -> Units >= 0.2.7 < 1.0.0
-    -> Observable >= 3.0.2 < 4.0.0
+    -> Units main
+    -> Observable main
 
 Threads 3.1.7
-    -> Timing >= 2.2.8 < 3.0.0
-    -> Observable >= 3.0.2 < 4.0.0
+    -> Timing main
+    -> Observable main
 
 Event 6.0.3
-    -> Threads >= 3.1.7 < 4.0.0
-    -> Timing >= 2.2.8 < 3.0.0
-    -> Observable >= 3.0.2 < 4.0.0
+    -> Threads main
+    -> Timing main
+    -> Observable main
 
 Command 1.0.3
-    -> Observable >= 3.0.2 < 4.0.0
+    -> Observable main
 
 Security 0.4.2
-    -> Observable >= 3.0.2 < 4.0.0
+    -> Observable main
 
 Persistence 0.3.2
     -> none
 
 Sockets 0.7.3
-    -> Observable >= 3.0.2 < 4.0.0
+    -> Observable main
 
 ESP-Now 0.8.3
-    -> Timing >= 2.2.8 < 3.0.0
-    -> Observable >= 3.0.2 < 4.0.0
+    -> Timing main
+    -> Observable main
 
 WiFi 0.2.0
-    -> Observable >= 3.0.2 < 4.0.0
-    -> Serializable >= 0.11.3 < 1.0.0
-    -> Threads >= 3.1.7 < 4.0.0
+    -> Observable main
+    -> Serializable main
+    -> Threads main
 
 Serial 0.8.1
     -> none in the core package
@@ -79,51 +79,51 @@ Serial 0.8.1
 
 ```text
 Units
-    - - -> Serializable >= 0.11.3 < 1.0.0
+    - - -> Serializable main
 
 Threads
     - - -> Serializable representations transitively through Units
 
 Event
-    - - -> Serializable >= 0.11.3 < 1.0.0
+    - - -> Serializable main
 
 Command
-    - - -> Event >= 6.0.3 < 7.0.0
+    - - -> Event main
 
 Security
-    - - -> Event >= 6.0.3 < 7.0.0
+    - - -> Event main
 
 Persistence
-    - - -> Serializable >= 0.11.3 < 1.0.0
+    - - -> Serializable main
             protected persistence reaches Security through Serializable's protection API
 
 Sockets
-    - - -> Event >= 6.0.3 < 7.0.0
-    - - -> Command >= 1.0.3 < 2.0.0
-    - - -> Security >= 0.4.2 < 1.0.0
-    - - -> Timing >= 2.2.8 < 3.0.0
+    - - -> Event main
+    - - -> Command main
+    - - -> Security main
+    - - -> Timing main
 
 ESP-Now
-    - - -> Event >= 6.0.3 < 7.0.0
-    - - -> Command >= 1.0.3 < 2.0.0
-    - - -> Security >= 0.4.2 < 1.0.0
+    - - -> Event main
+    - - -> Command main
+    - - -> Security main
 
 WiFi
-    - - -> Persistence >= 0.3.2 < 1.0.0
-    - - -> Security >= 0.4.2 < 1.0.0
-    - - -> Event >= 6.0.3 < 7.0.0
-    - - -> Command >= 1.0.3 < 2.0.0
+    - - -> Persistence main
+    - - -> Security main
+    - - -> Event main
+    - - -> Command main
 
 Serial
-    - - -> Serializable >= 0.11.3 < 1.0.0
-    - - -> Timing >= 2.2.8 < 3.0.0
-    - - -> Threads >= 3.1.7 < 4.0.0
-    - - -> Event >= 6.0.3 < 7.0.0
-    - - -> Command >= 1.0.3 < 2.0.0
-    - - -> Security >= 0.4.2 < 1.0.0
-    - - -> Sockets >= 0.7.3 < 1.0.0
-    - - -> ESP-Now >= 0.8.3 < 1.0.0
-    - - -> WiFi >= 0.2.0 < 1.0.0
+    - - -> Serializable main
+    - - -> Timing main
+    - - -> Threads main
+    - - -> Event main
+    - - -> Command main
+    - - -> Security main
+    - - -> Sockets main
+    - - -> ESP-Now main
+    - - -> WiFi main
 ```
 
 ## Completed cascade
