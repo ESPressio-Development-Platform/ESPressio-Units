@@ -12,7 +12,14 @@ namespace ESPressio {
 
             Each enumeration value is the corresponding base-10 exponent.
         */
-        enum UnitOrderOfMagnitude : int8_t {
+                /**
+         * ESPressio Memory Audit
+         * Underlying storage: 1 bytes
+         * Total Memory: 1 bytes [0 bytes dynamic allocation]
+         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+         * End ESPressio Memory Audit
+         */
+enum UnitOrderOfMagnitude : int8_t {
             Quecto = -30,
             Ronto = -27,
             Yocto = -24,
@@ -48,7 +55,14 @@ namespace ESPressio {
             SI derived quantities are unlimited, so `Other` represents valid
             quantity contexts which are not explicitly enumerated here.
         */
-        enum class UnitContext : uint8_t {
+                /**
+         * ESPressio Memory Audit
+         * Underlying storage: 1 bytes
+         * Total Memory: 1 bytes [0 bytes dynamic allocation]
+         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+         * End ESPressio Memory Audit
+         */
+enum class UnitContext : uint8_t {
             Unknown,                        // Unknown or unspecified value
             Other,                          // Specialised derived value
 
@@ -158,7 +172,14 @@ namespace ESPressio {
             Exposure                         // Coulomb per gram (C/g)
         };
 
-        enum class UnitRepresentation : uint8_t {
+                /**
+         * ESPressio Memory Audit
+         * Underlying storage: 1 bytes
+         * Total Memory: 1 bytes [0 bytes dynamic allocation]
+         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+         * End ESPressio Memory Audit
+         */
+enum class UnitRepresentation : uint8_t {
             Symbol, // Abbreviated SI symbol
             Name    // Full name
         };

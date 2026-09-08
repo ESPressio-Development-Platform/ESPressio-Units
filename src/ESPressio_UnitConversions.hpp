@@ -16,59 +16,136 @@ namespace ESPressio {
             constexpr long double Pi =
                 3.141592653589793238462643383279502884L;
 
-            template <UnitContext TContext>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <UnitContext TContext>
             struct UnitContextCanonicalMagnitude {
                 static constexpr UnitOrderOfMagnitude value = Base;
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitContextCanonicalMagnitude<UnitContext::Mass> {
                 static constexpr UnitOrderOfMagnitude value = Kilo;
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitContextCanonicalMagnitude<UnitContext::Density> {
                 static constexpr UnitOrderOfMagnitude value = Kilo;
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitContextCanonicalMagnitude<UnitContext::MassDensity> {
                 static constexpr UnitOrderOfMagnitude value = Kilo;
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitContextCanonicalMagnitude<UnitContext::SurfaceDensity> {
                 static constexpr UnitOrderOfMagnitude value = Kilo;
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitContextCanonicalMagnitude<UnitContext::MassConcentration> {
                 static constexpr UnitOrderOfMagnitude value = Kilo;
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitContextCanonicalMagnitude<UnitContext::SpecificVolume> {
                 static constexpr UnitOrderOfMagnitude value = Milli;
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitContextCanonicalMagnitude<UnitContext::SpecificEnergy> {
                 static constexpr UnitOrderOfMagnitude value = Milli;
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitContextCanonicalMagnitude<
                 UnitContext::SpecificHeatCapacity
             > {
                 static constexpr UnitOrderOfMagnitude value = Milli;
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitContextCanonicalMagnitude<UnitContext::SpecificEntropy> {
                 static constexpr UnitOrderOfMagnitude value = Milli;
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitContextCanonicalMagnitude<UnitContext::Exposure> {
                 static constexpr UnitOrderOfMagnitude value = Milli;
             };
@@ -120,7 +197,14 @@ namespace ESPressio {
                     : value * scale;
             }
 
-            template <
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <
                 UnitOrderOfMagnitude TSource,
                 UnitOrderOfMagnitude TTarget
             >
@@ -143,7 +227,14 @@ namespace ESPressio {
                 }
             };
 
-            template <UnitOrderOfMagnitude TMagnitude>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <UnitOrderOfMagnitude TMagnitude>
             struct CompileTimeMagnitudeConverter<TMagnitude, TMagnitude> {
                 static long double Convert(long double value) {
                     return value;
@@ -241,10 +332,26 @@ namespace ESPressio {
                 return static_cast<TResult>(std::round(value));
             }
 
-            template <typename T, typename = void>
+                        /**
+             * ESPressio Memory Audit
+             * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <typename T, typename = void>
             struct HasUnitMetadata : std::false_type { };
 
-            template <typename T>
+                        /**
+             * ESPressio Memory Audit
+             * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <typename T>
             struct HasUnitMetadata<
                 T,
                 decltype(
@@ -257,10 +364,26 @@ namespace ESPressio {
             template <typename... TInputs>
             struct AllUnitInputs;
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct AllUnitInputs<> : std::true_type { };
 
-            template <typename TFirst, typename... TRest>
+                        /**
+             * ESPressio Memory Audit
+             * Inherited Memory Total: 4 bytes [0 bytes dynamic allocation]
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 4 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <typename TFirst, typename... TRest>
             struct AllUnitInputs<TFirst, TRest...> :
                 std::integral_constant<
                     bool,
@@ -276,7 +399,14 @@ namespace ESPressio {
             >
             struct UnitFormula;
 
-            template <
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <
                 typename TDerived,
                 typename TValue,
                 UnitContext TTargetContext
@@ -346,160 +476,376 @@ namespace ESPressio {
 
         } // namespace Internal
 
-        template <UnitContext TSource, UnitContext TTarget>
+                /**
+         * ESPressio Memory Audit
+         * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+         * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+         * Total Memory: 1 bytes [0 bytes dynamic allocation]
+         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+         * End ESPressio Memory Audit
+         */
+template <UnitContext TSource, UnitContext TTarget>
         struct IsDirectUnitContextConversion : std::false_type { };
 
-        template <>
+                /**
+         * ESPressio Memory Audit
+         * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+         * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+         * Total Memory: 1 bytes [0 bytes dynamic allocation]
+         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+         * End ESPressio Memory Audit
+         */
+template <>
         struct IsDirectUnitContextConversion<
             UnitContext::Length,
             UnitContext::Distance
         > : std::true_type { };
 
-        template <>
+                /**
+         * ESPressio Memory Audit
+         * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+         * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+         * Total Memory: 1 bytes [0 bytes dynamic allocation]
+         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+         * End ESPressio Memory Audit
+         */
+template <>
         struct IsDirectUnitContextConversion<
             UnitContext::Distance,
             UnitContext::Length
         > : std::true_type { };
 
-        template <>
+                /**
+         * ESPressio Memory Audit
+         * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+         * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+         * Total Memory: 1 bytes [0 bytes dynamic allocation]
+         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+         * End ESPressio Memory Audit
+         */
+template <>
         struct IsDirectUnitContextConversion<
             UnitContext::Speed,
             UnitContext::Velocity
         > : std::true_type { };
 
-        template <>
+                /**
+         * ESPressio Memory Audit
+         * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+         * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+         * Total Memory: 1 bytes [0 bytes dynamic allocation]
+         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+         * End ESPressio Memory Audit
+         */
+template <>
         struct IsDirectUnitContextConversion<
             UnitContext::Velocity,
             UnitContext::Speed
         > : std::true_type { };
 
-        template <>
+                /**
+         * ESPressio Memory Audit
+         * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+         * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+         * Total Memory: 1 bytes [0 bytes dynamic allocation]
+         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+         * End ESPressio Memory Audit
+         */
+template <>
         struct IsDirectUnitContextConversion<
             UnitContext::Force,
             UnitContext::Weight
         > : std::true_type { };
 
-        template <>
+                /**
+         * ESPressio Memory Audit
+         * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+         * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+         * Total Memory: 1 bytes [0 bytes dynamic allocation]
+         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+         * End ESPressio Memory Audit
+         */
+template <>
         struct IsDirectUnitContextConversion<
             UnitContext::Weight,
             UnitContext::Force
         > : std::true_type { };
 
-        template <>
+                /**
+         * ESPressio Memory Audit
+         * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+         * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+         * Total Memory: 1 bytes [0 bytes dynamic allocation]
+         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+         * End ESPressio Memory Audit
+         */
+template <>
         struct IsDirectUnitContextConversion<
             UnitContext::Pressure,
             UnitContext::MechanicalStress
         > : std::true_type { };
 
-        template <>
+                /**
+         * ESPressio Memory Audit
+         * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+         * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+         * Total Memory: 1 bytes [0 bytes dynamic allocation]
+         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+         * End ESPressio Memory Audit
+         */
+template <>
         struct IsDirectUnitContextConversion<
             UnitContext::MechanicalStress,
             UnitContext::Pressure
         > : std::true_type { };
 
-        template <>
+                /**
+         * ESPressio Memory Audit
+         * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+         * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+         * Total Memory: 1 bytes [0 bytes dynamic allocation]
+         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+         * End ESPressio Memory Audit
+         */
+template <>
         struct IsDirectUnitContextConversion<
             UnitContext::MomentOfForce,
             UnitContext::Torque
         > : std::true_type { };
 
-        template <>
+                /**
+         * ESPressio Memory Audit
+         * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+         * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+         * Total Memory: 1 bytes [0 bytes dynamic allocation]
+         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+         * End ESPressio Memory Audit
+         */
+template <>
         struct IsDirectUnitContextConversion<
             UnitContext::Torque,
             UnitContext::MomentOfForce
         > : std::true_type { };
 
-        template <>
+                /**
+         * ESPressio Memory Audit
+         * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+         * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+         * Total Memory: 1 bytes [0 bytes dynamic allocation]
+         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+         * End ESPressio Memory Audit
+         */
+template <>
         struct IsDirectUnitContextConversion<
             UnitContext::Density,
             UnitContext::MassDensity
         > : std::true_type { };
 
-        template <>
+                /**
+         * ESPressio Memory Audit
+         * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+         * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+         * Total Memory: 1 bytes [0 bytes dynamic allocation]
+         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+         * End ESPressio Memory Audit
+         */
+template <>
         struct IsDirectUnitContextConversion<
             UnitContext::MassDensity,
             UnitContext::Density
         > : std::true_type { };
 
-        template <>
+                /**
+         * ESPressio Memory Audit
+         * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+         * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+         * Total Memory: 1 bytes [0 bytes dynamic allocation]
+         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+         * End ESPressio Memory Audit
+         */
+template <>
         struct IsDirectUnitContextConversion<
             UnitContext::Energy,
             UnitContext::Work
         > : std::true_type { };
 
-        template <>
+                /**
+         * ESPressio Memory Audit
+         * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+         * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+         * Total Memory: 1 bytes [0 bytes dynamic allocation]
+         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+         * End ESPressio Memory Audit
+         */
+template <>
         struct IsDirectUnitContextConversion<
             UnitContext::Energy,
             UnitContext::Heat
         > : std::true_type { };
 
-        template <>
+                /**
+         * ESPressio Memory Audit
+         * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+         * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+         * Total Memory: 1 bytes [0 bytes dynamic allocation]
+         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+         * End ESPressio Memory Audit
+         */
+template <>
         struct IsDirectUnitContextConversion<
             UnitContext::Work,
             UnitContext::Energy
         > : std::true_type { };
 
-        template <>
+                /**
+         * ESPressio Memory Audit
+         * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+         * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+         * Total Memory: 1 bytes [0 bytes dynamic allocation]
+         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+         * End ESPressio Memory Audit
+         */
+template <>
         struct IsDirectUnitContextConversion<
             UnitContext::Work,
             UnitContext::Heat
         > : std::true_type { };
 
-        template <>
+                /**
+         * ESPressio Memory Audit
+         * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+         * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+         * Total Memory: 1 bytes [0 bytes dynamic allocation]
+         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+         * End ESPressio Memory Audit
+         */
+template <>
         struct IsDirectUnitContextConversion<
             UnitContext::Heat,
             UnitContext::Energy
         > : std::true_type { };
 
-        template <>
+                /**
+         * ESPressio Memory Audit
+         * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+         * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+         * Total Memory: 1 bytes [0 bytes dynamic allocation]
+         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+         * End ESPressio Memory Audit
+         */
+template <>
         struct IsDirectUnitContextConversion<
             UnitContext::Heat,
             UnitContext::Work
         > : std::true_type { };
 
-        template <>
+                /**
+         * ESPressio Memory Audit
+         * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+         * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+         * Total Memory: 1 bytes [0 bytes dynamic allocation]
+         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+         * End ESPressio Memory Audit
+         */
+template <>
         struct IsDirectUnitContextConversion<
             UnitContext::ElectricPotential,
             UnitContext::ElectricPotentialDifference
         > : std::true_type { };
 
-        template <>
+                /**
+         * ESPressio Memory Audit
+         * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+         * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+         * Total Memory: 1 bytes [0 bytes dynamic allocation]
+         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+         * End ESPressio Memory Audit
+         */
+template <>
         struct IsDirectUnitContextConversion<
             UnitContext::ElectricPotential,
             UnitContext::ElectromotiveForce
         > : std::true_type { };
 
-        template <>
+                /**
+         * ESPressio Memory Audit
+         * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+         * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+         * Total Memory: 1 bytes [0 bytes dynamic allocation]
+         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+         * End ESPressio Memory Audit
+         */
+template <>
         struct IsDirectUnitContextConversion<
             UnitContext::ElectricPotentialDifference,
             UnitContext::ElectricPotential
         > : std::true_type { };
 
-        template <>
+                /**
+         * ESPressio Memory Audit
+         * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+         * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+         * Total Memory: 1 bytes [0 bytes dynamic allocation]
+         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+         * End ESPressio Memory Audit
+         */
+template <>
         struct IsDirectUnitContextConversion<
             UnitContext::ElectricPotentialDifference,
             UnitContext::ElectromotiveForce
         > : std::true_type { };
 
-        template <>
+                /**
+         * ESPressio Memory Audit
+         * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+         * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+         * Total Memory: 1 bytes [0 bytes dynamic allocation]
+         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+         * End ESPressio Memory Audit
+         */
+template <>
         struct IsDirectUnitContextConversion<
             UnitContext::ElectromotiveForce,
             UnitContext::ElectricPotential
         > : std::true_type { };
 
-        template <>
+                /**
+         * ESPressio Memory Audit
+         * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+         * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+         * Total Memory: 1 bytes [0 bytes dynamic allocation]
+         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+         * End ESPressio Memory Audit
+         */
+template <>
         struct IsDirectUnitContextConversion<
             UnitContext::ElectromotiveForce,
             UnitContext::ElectricPotentialDifference
         > : std::true_type { };
 
-        template <>
+                /**
+         * ESPressio Memory Audit
+         * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+         * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+         * Total Memory: 1 bytes [0 bytes dynamic allocation]
+         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+         * End ESPressio Memory Audit
+         */
+template <>
         struct IsDirectUnitContextConversion<
             UnitContext::ElectricFluxDensity,
             UnitContext::ElectricDisplacement
         > : std::true_type { };
 
-        template <>
+                /**
+         * ESPressio Memory Audit
+         * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+         * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+         * Total Memory: 1 bytes [0 bytes dynamic allocation]
+         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+         * End ESPressio Memory Audit
+         */
+template <>
         struct IsDirectUnitContextConversion<
             UnitContext::ElectricDisplacement,
             UnitContext::ElectricFluxDensity
@@ -507,7 +853,14 @@ namespace ESPressio {
 
         namespace Internal {
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Length,
                 UnitContext::Distance
@@ -518,7 +871,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Distance,
                 UnitContext::Length
@@ -529,7 +889,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Speed,
                 UnitContext::Velocity
@@ -540,7 +907,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Velocity,
                 UnitContext::Speed
@@ -551,7 +925,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Force,
                 UnitContext::Weight
@@ -562,7 +943,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Weight,
                 UnitContext::Force
@@ -573,7 +961,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Pressure,
                 UnitContext::MechanicalStress
@@ -584,7 +979,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::MechanicalStress,
                 UnitContext::Pressure
@@ -595,7 +997,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::MomentOfForce,
                 UnitContext::Torque
@@ -606,7 +1015,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Torque,
                 UnitContext::MomentOfForce
@@ -617,7 +1033,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Density,
                 UnitContext::MassDensity
@@ -628,7 +1051,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::MassDensity,
                 UnitContext::Density
@@ -639,7 +1069,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Energy,
                 UnitContext::Work
@@ -650,7 +1087,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Energy,
                 UnitContext::Heat
@@ -661,7 +1105,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Work,
                 UnitContext::Energy
@@ -672,7 +1123,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Work,
                 UnitContext::Heat
@@ -683,7 +1141,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Heat,
                 UnitContext::Energy
@@ -694,7 +1159,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Heat,
                 UnitContext::Work
@@ -705,7 +1177,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectricPotential,
                 UnitContext::ElectricPotentialDifference
@@ -716,7 +1195,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectricPotential,
                 UnitContext::ElectromotiveForce
@@ -727,7 +1213,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectricPotentialDifference,
                 UnitContext::ElectricPotential
@@ -738,7 +1231,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectricPotentialDifference,
                 UnitContext::ElectromotiveForce
@@ -749,7 +1249,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectromotiveForce,
                 UnitContext::ElectricPotential
@@ -760,7 +1267,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectromotiveForce,
                 UnitContext::ElectricPotentialDifference
@@ -771,7 +1285,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectricFluxDensity,
                 UnitContext::ElectricDisplacement
@@ -782,7 +1303,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectricDisplacement,
                 UnitContext::ElectricFluxDensity
@@ -793,7 +1321,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Frequency,
                 UnitContext::Time
@@ -804,7 +1339,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Time,
                 UnitContext::Frequency
@@ -815,7 +1357,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::AngularFrequency,
                 UnitContext::Frequency
@@ -826,7 +1375,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Frequency,
                 UnitContext::AngularFrequency
@@ -837,7 +1393,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ThermodynamicTemperature,
                 UnitContext::CelsiusTemperature
@@ -848,7 +1411,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::CelsiusTemperature,
                 UnitContext::ThermodynamicTemperature
@@ -859,7 +1429,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectricConductance,
                 UnitContext::ElectricResistance
@@ -870,7 +1447,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectricResistance,
                 UnitContext::ElectricConductance
@@ -881,7 +1465,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Wavenumber,
                 UnitContext::Length
@@ -892,7 +1483,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Wavenumber,
                 UnitContext::Distance
@@ -903,7 +1501,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Area,
                 UnitContext::Length,
@@ -918,7 +1523,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Area,
                 UnitContext::Length,
@@ -933,7 +1545,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Area,
                 UnitContext::Distance,
@@ -948,7 +1567,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Area,
                 UnitContext::Distance,
@@ -963,7 +1589,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Volume,
                 UnitContext::Area,
@@ -978,7 +1611,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Volume,
                 UnitContext::Area,
@@ -993,7 +1633,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Speed,
                 UnitContext::Length,
@@ -1008,7 +1655,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Speed,
                 UnitContext::Distance,
@@ -1023,7 +1677,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Velocity,
                 UnitContext::Length,
@@ -1038,7 +1699,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Velocity,
                 UnitContext::Distance,
@@ -1053,7 +1721,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Acceleration,
                 UnitContext::Speed,
@@ -1068,7 +1743,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Acceleration,
                 UnitContext::Velocity,
@@ -1083,7 +1765,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::AngularVelocity,
                 UnitContext::PlaneAngle,
@@ -1098,7 +1787,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::AngularAcceleration,
                 UnitContext::AngularVelocity,
@@ -1113,7 +1809,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Force,
                 UnitContext::Mass,
@@ -1128,7 +1831,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Weight,
                 UnitContext::Mass,
@@ -1143,7 +1853,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Pressure,
                 UnitContext::Force,
@@ -1158,7 +1875,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Pressure,
                 UnitContext::Weight,
@@ -1173,7 +1897,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::MechanicalStress,
                 UnitContext::Force,
@@ -1188,7 +1919,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::MechanicalStress,
                 UnitContext::Weight,
@@ -1203,7 +1941,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::MomentOfForce,
                 UnitContext::Force,
@@ -1218,7 +1963,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::MomentOfForce,
                 UnitContext::Force,
@@ -1233,7 +1985,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::MomentOfForce,
                 UnitContext::Weight,
@@ -1248,7 +2007,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::MomentOfForce,
                 UnitContext::Weight,
@@ -1263,7 +2029,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Torque,
                 UnitContext::Force,
@@ -1278,7 +2051,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Torque,
                 UnitContext::Force,
@@ -1293,7 +2073,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Torque,
                 UnitContext::Weight,
@@ -1308,7 +2095,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Torque,
                 UnitContext::Weight,
@@ -1323,7 +2117,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::SurfaceTension,
                 UnitContext::Force,
@@ -1338,7 +2139,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::SurfaceTension,
                 UnitContext::Force,
@@ -1353,7 +2161,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::SurfaceTension,
                 UnitContext::Weight,
@@ -1368,7 +2183,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::SurfaceTension,
                 UnitContext::Weight,
@@ -1383,7 +2205,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Density,
                 UnitContext::Mass,
@@ -1398,7 +2227,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::MassDensity,
                 UnitContext::Mass,
@@ -1413,7 +2249,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::SurfaceDensity,
                 UnitContext::Mass,
@@ -1428,7 +2271,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::SpecificVolume,
                 UnitContext::Volume,
@@ -1443,7 +2293,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::DynamicViscosity,
                 UnitContext::Pressure,
@@ -1458,7 +2315,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::DynamicViscosity,
                 UnitContext::MechanicalStress,
@@ -1473,7 +2337,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::KinematicViscosity,
                 UnitContext::DynamicViscosity,
@@ -1488,7 +2359,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::KinematicViscosity,
                 UnitContext::DynamicViscosity,
@@ -1503,7 +2381,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Energy,
                 UnitContext::Force,
@@ -1518,7 +2403,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Energy,
                 UnitContext::Force,
@@ -1533,7 +2425,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Energy,
                 UnitContext::Weight,
@@ -1548,7 +2447,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Energy,
                 UnitContext::Weight,
@@ -1563,7 +2469,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Work,
                 UnitContext::Force,
@@ -1578,7 +2491,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Work,
                 UnitContext::Force,
@@ -1593,7 +2513,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Work,
                 UnitContext::Weight,
@@ -1608,7 +2535,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Work,
                 UnitContext::Weight,
@@ -1623,7 +2557,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Heat,
                 UnitContext::Force,
@@ -1638,7 +2579,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Heat,
                 UnitContext::Force,
@@ -1653,7 +2601,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Heat,
                 UnitContext::Weight,
@@ -1668,7 +2623,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Heat,
                 UnitContext::Weight,
@@ -1683,7 +2645,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Energy,
                 UnitContext::Power,
@@ -1698,7 +2667,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Work,
                 UnitContext::Power,
@@ -1713,7 +2689,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Heat,
                 UnitContext::Power,
@@ -1728,7 +2711,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Power,
                 UnitContext::Energy,
@@ -1743,7 +2733,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Power,
                 UnitContext::Work,
@@ -1758,7 +2755,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Power,
                 UnitContext::Heat,
@@ -1773,7 +2777,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Power,
                 UnitContext::Force,
@@ -1788,7 +2799,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Power,
                 UnitContext::Force,
@@ -1803,7 +2821,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Power,
                 UnitContext::Weight,
@@ -1818,7 +2843,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Power,
                 UnitContext::Weight,
@@ -1833,7 +2865,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::SpecificEnergy,
                 UnitContext::Energy,
@@ -1848,7 +2887,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::SpecificEnergy,
                 UnitContext::Work,
@@ -1863,7 +2909,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::SpecificEnergy,
                 UnitContext::Heat,
@@ -1878,7 +2931,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::EnergyDensity,
                 UnitContext::Energy,
@@ -1893,7 +2953,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::EnergyDensity,
                 UnitContext::Work,
@@ -1908,7 +2975,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::EnergyDensity,
                 UnitContext::Heat,
@@ -1923,7 +2997,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::HeatCapacity,
                 UnitContext::Energy,
@@ -1938,7 +3019,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::HeatCapacity,
                 UnitContext::Heat,
@@ -1953,7 +3041,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Entropy,
                 UnitContext::Energy,
@@ -1968,7 +3063,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Entropy,
                 UnitContext::Heat,
@@ -1983,7 +3085,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::HeatFluxDensity,
                 UnitContext::Power,
@@ -1998,7 +3107,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Irradiance,
                 UnitContext::Power,
@@ -2013,7 +3129,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectricCharge,
                 UnitContext::ElectricCurrent,
@@ -2028,7 +3151,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectricPotential,
                 UnitContext::Energy,
@@ -2043,7 +3173,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectricPotential,
                 UnitContext::Work,
@@ -2058,7 +3195,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectricPotentialDifference,
                 UnitContext::Energy,
@@ -2073,7 +3217,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectricPotentialDifference,
                 UnitContext::Work,
@@ -2088,7 +3239,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectromotiveForce,
                 UnitContext::Energy,
@@ -2103,7 +3261,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectromotiveForce,
                 UnitContext::Work,
@@ -2118,7 +3283,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectricPotential,
                 UnitContext::Power,
@@ -2133,7 +3305,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectricPotentialDifference,
                 UnitContext::Power,
@@ -2148,7 +3327,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectromotiveForce,
                 UnitContext::Power,
@@ -2163,7 +3349,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Capacitance,
                 UnitContext::ElectricCharge,
@@ -2178,7 +3371,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Capacitance,
                 UnitContext::ElectricCharge,
@@ -2193,7 +3393,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Capacitance,
                 UnitContext::ElectricCharge,
@@ -2208,7 +3415,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectricResistance,
                 UnitContext::ElectricPotential,
@@ -2223,7 +3437,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectricResistance,
                 UnitContext::ElectricPotentialDifference,
@@ -2238,7 +3459,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectricResistance,
                 UnitContext::ElectromotiveForce,
@@ -2253,7 +3481,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectricConductance,
                 UnitContext::ElectricCurrent,
@@ -2268,7 +3503,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectricConductance,
                 UnitContext::ElectricCurrent,
@@ -2283,7 +3525,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectricConductance,
                 UnitContext::ElectricCurrent,
@@ -2298,7 +3547,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::CurrentDensity,
                 UnitContext::ElectricCurrent,
@@ -2313,7 +3569,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectricFieldStrength,
                 UnitContext::ElectricPotential,
@@ -2328,7 +3591,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectricFieldStrength,
                 UnitContext::ElectricPotential,
@@ -2343,7 +3613,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectricFieldStrength,
                 UnitContext::ElectricPotentialDifference,
@@ -2358,7 +3635,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectricFieldStrength,
                 UnitContext::ElectricPotentialDifference,
@@ -2373,7 +3657,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectricFieldStrength,
                 UnitContext::ElectromotiveForce,
@@ -2388,7 +3679,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectricFieldStrength,
                 UnitContext::ElectromotiveForce,
@@ -2403,7 +3701,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectricChargeDensity,
                 UnitContext::ElectricCharge,
@@ -2418,7 +3723,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::SurfaceChargeDensity,
                 UnitContext::ElectricCharge,
@@ -2433,7 +3745,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectricFluxDensity,
                 UnitContext::ElectricCharge,
@@ -2448,7 +3767,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ElectricDisplacement,
                 UnitContext::ElectricCharge,
@@ -2463,7 +3789,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Permittivity,
                 UnitContext::Capacitance,
@@ -2478,7 +3811,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Permittivity,
                 UnitContext::Capacitance,
@@ -2493,7 +3833,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::MagneticFieldStrength,
                 UnitContext::ElectricCurrent,
@@ -2508,7 +3855,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::MagneticFieldStrength,
                 UnitContext::ElectricCurrent,
@@ -2523,7 +3877,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::MagneticFlux,
                 UnitContext::ElectricPotential,
@@ -2538,7 +3899,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::MagneticFlux,
                 UnitContext::ElectricPotentialDifference,
@@ -2553,7 +3921,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::MagneticFlux,
                 UnitContext::ElectromotiveForce,
@@ -2568,7 +3943,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::MagneticFluxDensity,
                 UnitContext::MagneticFlux,
@@ -2583,7 +3965,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::MagnetomotiveForce,
                 UnitContext::ElectricCurrent,
@@ -2598,7 +3987,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::MagnetomotiveForce,
                 UnitContext::ElectricCurrent,
@@ -2613,7 +4009,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Inductance,
                 UnitContext::MagneticFlux,
@@ -2628,7 +4031,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Permeability,
                 UnitContext::Inductance,
@@ -2643,7 +4053,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Permeability,
                 UnitContext::Inductance,
@@ -2658,7 +4075,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::LuminousFlux,
                 UnitContext::LuminousIntensity,
@@ -2673,7 +4097,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Illuminance,
                 UnitContext::LuminousFlux,
@@ -2688,7 +4119,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Luminance,
                 UnitContext::LuminousIntensity,
@@ -2703,7 +4141,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::AmountOfSubstanceConcentration,
                 UnitContext::AmountOfSubstance,
@@ -2718,7 +4163,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::MassConcentration,
                 UnitContext::Mass,
@@ -2733,7 +4185,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::MolarEnergy,
                 UnitContext::Energy,
@@ -2748,7 +4207,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::MolarEnergy,
                 UnitContext::Work,
@@ -2763,7 +4229,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::MolarEnergy,
                 UnitContext::Heat,
@@ -2778,7 +4251,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::MolarEntropy,
                 UnitContext::Entropy,
@@ -2793,7 +4273,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::CatalyticActivity,
                 UnitContext::AmountOfSubstance,
@@ -2808,7 +4295,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::AbsorbedDose,
                 UnitContext::Energy,
@@ -2823,7 +4317,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Kerma,
                 UnitContext::Energy,
@@ -2838,7 +4339,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::DoseEquivalent,
                 UnitContext::AbsorbedDose,
@@ -2853,7 +4361,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::DoseEquivalent,
                 UnitContext::AbsorbedDose,
@@ -2868,7 +4383,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::DoseEquivalent,
                 UnitContext::Kerma,
@@ -2883,7 +4405,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::DoseEquivalent,
                 UnitContext::Kerma,
@@ -2898,7 +4427,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::Exposure,
                 UnitContext::ElectricCharge,
@@ -2913,7 +4449,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::SpecificHeatCapacity,
                 UnitContext::Energy,
@@ -2930,7 +4473,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::SpecificHeatCapacity,
                 UnitContext::Heat,
@@ -2947,7 +4497,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::SpecificEntropy,
                 UnitContext::Energy,
@@ -2964,7 +4521,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::SpecificEntropy,
                 UnitContext::Heat,
@@ -2981,7 +4545,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ThermalConductivity,
                 UnitContext::Power,
@@ -2998,7 +4569,14 @@ namespace ESPressio {
                 }
             };
 
-            template <>
+                        /**
+             * ESPressio Memory Audit
+             * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+             * Total Memory: 1 bytes [0 bytes dynamic allocation]
+             * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+             * End ESPressio Memory Audit
+             */
+template <>
             struct UnitFormula<
                 UnitContext::ThermalConductivity,
                 UnitContext::Power,

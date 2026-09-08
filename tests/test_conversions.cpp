@@ -8,17 +8,48 @@
 
 using namespace ESPressio::Units;
 
+/**
+ * ESPressio Memory Audit
+ * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+ * Total Memory: 1 bytes [0 bytes dynamic allocation]
+ * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+ * End ESPressio Memory Audit
+ */
 template <typename...> struct MakeVoid { typedef void type; };
 template <typename... T> using VoidT = typename MakeVoid<T...>::type;
 
+/**
+ * ESPressio Memory Audit
+ * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+ * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+ * Total Memory: 1 bytes [0 bytes dynamic allocation]
+ * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+ * End ESPressio Memory Audit
+ */
 template <typename TTarget, typename TEnable, typename... TInputs>
 struct CanCreateFromImplementation : std::false_type { };
 
+/**
+ * ESPressio Memory Audit
+ * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+ * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+ * Total Memory: 1 bytes [0 bytes dynamic allocation]
+ * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+ * End ESPressio Memory Audit
+ */
 template <typename TTarget, typename... TInputs>
 struct CanCreateFromImplementation<TTarget, VoidT<decltype(
     TTarget::From(std::declval<const TInputs&>()...)
 )>, TInputs...> : std::true_type { };
 
+/**
+ * ESPressio Memory Audit
+ * Inherited Memory Total: 1 bytes [0 bytes dynamic allocation]
+ * Members: none (standalone empty object occupies 1 byte; an eligible empty base may be optimized to 0 bytes).
+ * Total Memory: 1 bytes [0 bytes dynamic allocation]
+ * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+ * End ESPressio Memory Audit
+ */
 template <typename TTarget, typename... TInputs>
 struct CanCreateFrom : CanCreateFromImplementation<
     TTarget, void, TInputs...
