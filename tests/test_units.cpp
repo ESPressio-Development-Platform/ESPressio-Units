@@ -12,16 +12,16 @@ using namespace ESPressio::Units;
 
 namespace {
 
-        /**
-     * ESPressio Memory Audit
-     * Members:
-     * - positiveCases (std::size_t): 4 bytes [0 bytes dynamic allocation]
-     * - negativeCases (std::size_t): 4 bytes [0 bytes dynamic allocation]
-     * - failures (std::size_t): 4 bytes [0 bytes dynamic allocation]
-     * Total Memory: 12 bytes [0 bytes dynamic allocation]
-     * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
-     * End ESPressio Memory Audit
-     */
+/**
+ * ESPressio Memory Audit
+ * Members:
+ * - positiveCases (std::size_t): 4 bytes [0 bytes dynamic allocation]
+ * - negativeCases (std::size_t): 4 bytes [0 bytes dynamic allocation]
+ * - failures (std::size_t): 4 bytes [0 bytes dynamic allocation]
+ * Total Memory: 12 bytes [0 bytes dynamic allocation]
+ * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+ * End ESPressio Memory Audit
+ */
 struct TestState {
         std::size_t positiveCases = 0;
         std::size_t negativeCases = 0;
@@ -334,16 +334,16 @@ struct TestState {
     }
 
     void TestMagnitudeRepresentations(TestState& state) {
-                /**
-         * ESPressio Memory Audit
-         * Members:
-         * - magnitude (UnitOrderOfMagnitude): 1 bytes [0 bytes dynamic allocation]
-         * - symbol (char*): 4 bytes [0 bytes dynamic allocation]
-         * - name (char*): 4 bytes [0 bytes dynamic allocation]
-         * Total Memory: 12 bytes [0 bytes dynamic allocation]
-         * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
-         * End ESPressio Memory Audit
-         */
+/**
+ * ESPressio Memory Audit
+ * Members:
+ * - magnitude (UnitOrderOfMagnitude): 1 bytes [0 bytes dynamic allocation]
+ * - symbol (char*): 4 bytes [0 bytes dynamic allocation]
+ * - name (char*): 4 bytes [0 bytes dynamic allocation]
+ * Total Memory: 12 bytes [0 bytes dynamic allocation]
+ * Basis: ESP32/Xtensa ILP32 reference ABI (4-byte pointers/size_t); ESPressio stateful allocators/deleters included; ABI-sensitive STL/platform internals are identified explicitly.
+ * End ESPressio Memory Audit
+ */
 struct MagnitudeCase {
             UnitOrderOfMagnitude magnitude;
             const char* symbol;
