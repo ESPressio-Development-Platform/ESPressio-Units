@@ -6,7 +6,7 @@ ESPressio Units makes physical meaning part of the C++ type system so APIs can d
 
 ## Current Version — 0.2.7
 
-Version 0.2.7 retains the comprehensive Units 0.2 API and validates optional Serializable Unit variants against ESPressio Serializable `main`. Ordinary Unit types remain independent of Serializable.
+Version retains the comprehensive Units API and validates optional Serializable Unit variants against ESPressio Serializable `main`. Ordinary Unit types remain independent of Serializable.
 
 # Why strongly typed Units?
 
@@ -218,7 +218,7 @@ A specialised type can define its canonical magnitude/context:
 
 ```cpp
 template <typename TValue>
-struct Metres : public Unit<TValue, Base, UnitContext::Distance> {
+struct Metres: public Unit<TValue, Base, UnitContext::Distance> {
     using Unit<TValue, Base, UnitContext::Distance>::Unit;
 };
 ```
@@ -377,7 +377,3 @@ tools/generate_conversion_assets.py
 ```
 
 The ESP32 dependency-refresh consumer additionally compiles Serializable Unit values as ordinary aggregate members and `std::vector` elements against Serializable `main`, protecting the value-composition/container use case fixed by the upstream patch.
-
-# Changelog
-
-See [CHANGELOG.md](CHANGELOG.md) for release history and notable changes.

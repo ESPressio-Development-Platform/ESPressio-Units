@@ -2,7 +2,7 @@
 
 ![ESPressio Library Dependency Chart](ESPRESSIO_DEPENDENCY_CHART.svg)
 
-This document records the completed Serializable 0.11.3 cascade and the current released ESPressio dependency generation. Arrows point from a consuming library to the library it consumes.
+This document records the completed Serializable cascade and the current released ESPressio dependency generation. Arrows point from a consuming library to the library it consumes.
 
 - **Required** — part of the normal/core package contract.
 - **Opt-in** — introduced only when the corresponding integration/header is selected.
@@ -10,68 +10,68 @@ This document records the completed Serializable 0.11.3 cascade and the current 
 ## Released generation
 
 ```text
-Observable    3.0.2
-Serializable  0.11.3
-Units         0.2.7
-Timing        2.2.8
-Threads       3.1.7
-Event         6.0.3
-Command       1.0.3
-Security      0.4.2
-Persistence   0.3.2
-Sockets       0.7.3
-ESP-Now       0.8.3
-WiFi          0.2.0
-Serial        0.8.1
+Observable
+Serializable
+Units
+Timing
+Threads
+Event
+Command
+Security
+Persistence
+Sockets
+ESP-Now
+WiFi
+Serial
 ```
 
 ## Required dependency edges
 
 ```text
-Observable 3.0.2
+Observable
     -> none
 
-Serializable 0.11.3
+Serializable
     -> none
 
-Units 0.2.7
+Units
     -> none
 
-Timing 2.2.8
+Timing
     -> Units main
     -> Observable main
 
-Threads 3.1.7
+Threads
     -> Timing main
     -> Observable main
 
-Event 6.0.3
+Event
     -> Threads main
     -> Timing main
     -> Observable main
 
-Command 1.0.3
+Command
     -> Observable main
 
-Security 0.4.2
+Security
     -> Observable main
 
-Persistence 0.3.2
+Persistence
     -> none
 
-Sockets 0.7.3
+Sockets
     -> Observable main
 
-ESP-Now 0.8.3
+ESP-Now
     -> Timing main
     -> Observable main
 
-WiFi 0.2.0
+WiFi
     -> Observable main
     -> Serializable main
     -> Threads main
 
-Serial 0.8.1
+Serial
     -> none in the core package
 ```
 
@@ -129,15 +129,15 @@ Serial
 ## Completed cascade
 
 ```text
-Serializable 0.11.3
-    -> Units 0.2.7
-    -> Timing 2.2.8
-    -> Threads 3.1.7
-    -> Event 6.0.3
-    -> Command 1.0.3 / Security 0.4.2
-    -> Persistence 0.3.2 / Sockets 0.7.3 / ESP-Now 0.8.3
-    -> WiFi 0.2.0
-    -> Serial 0.8.1
+Serializable
+    -> Units
+    -> Timing
+    -> Threads
+    -> Event
+    -> Command / Security
+    -> Persistence / Sockets / ESP-Now
+    -> WiFi
+    -> Serial
 ```
 
 Event remains mechanism-only and has no reverse dependency on Command, Security, Sockets, ESP-Now or WiFi. Serial remains terminal/downstream. ESPressio Tree remains standalone and outside this cascade.
