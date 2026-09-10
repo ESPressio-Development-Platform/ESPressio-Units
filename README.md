@@ -4,9 +4,7 @@ Strongly typed SI unit and physical-quantity components for the ESPressio Develo
 
 ESPressio Units makes physical meaning part of the C++ type system so APIs can distinguish seconds from milliseconds, distance from energy, and other otherwise-identical numeric values at compile time.
 
-## Current Version — 0.2.7
-
-Version retains the comprehensive Units API and validates optional Serializable Unit variants against ESPressio Serializable `main`. Ordinary Unit types remain independent of Serializable.
+The library retains the comprehensive Units API and validates optional Serializable Unit variants against ESPressio Serializable. Ordinary Unit types remain independent of Serializable.
 
 # Why strongly typed Units?
 
